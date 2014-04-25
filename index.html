@@ -1,203 +1,348 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">
 
     <title>Landing Page &ndash; Layout Examples &ndash; Pure</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
-
-
-
-  
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="css/main-grid-old-ie.css">
     <![endif]-->
     <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="css/main-grid.css">
+    <link rel="stylesheet" href="css/main-grid.css">
     <!--<![endif]-->
-  
 
-  
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
     <![endif]-->
     <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="css/layouts/marketing.css">
+    <link rel="stylesheet" href="css/layouts/marketing.css">
     <!--<![endif]-->
-  
-
-
-
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-
-
-    
-
-    
-
-    
-
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="lib/animationcss/animate.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="">AniJS</a>
 
-
-
-
-
-
-
-
-
-<div class="header">
-    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Your Site</a>
-
-        <ul>
-            <li class="pure-menu-selected"><a href="#">Home</a></li>
-            <li><a href="#">Tour</a></li>
-            <li><a href="#">Sign Up</a></li>
-        </ul>
-    </div>
-</div>
-
-<div class="splash-container">
-    <div class="splash">
-        <h1 class="splash-head">Big Bold Text</h1>
-        <p class="splash-subhead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        </p>
-        <p>
-            <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
-        </p>
-    </div>
-</div>
-
-<div class="content-wrapper">
-    <div class="content">
-        <h2 class="content-head is-center">Excepteur sint occaecat cupidatat.</h2>
-
-        <div class="pure-g">
-            <div class="l-box pure-u-1 pure-u-med-1-2 pure-u-lrg-1-4">
-
-                <h3 class="content-subhead">
-                    <i class="fa fa-rocket"></i>
-                    Get Started Quickly
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-med-1-2 pure-u-lrg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-mobile"></i>
-                    Responsive Layouts
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-med-1-2 pure-u-lrg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-th-large"></i>
-                    Modular
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-med-1-2 pure-u-lrg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-check-square-o"></i>
-                    Plays Nice
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
+            <ul>
+                <li class="pure-menu-selected"><a href="#">Welcome</a></li>
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#tryit">Try It!</a></li>
+                <li><a href="#installing">Installing</a></li>
+                <li><a href="#using">Using</a></li>
+                <li><a href="#documentation">Documentation</a></li>
+            </ul>
         </div>
     </div>
-
-    <div class="ribbon l-box-lrg pure-g">
-        <div class="l-box-lrg is-center pure-u-1 pure-u-med-1-2 pure-u-lrg-2-5">
-            <img class="pure-img-responsive" alt="File Icons" width="300" src="img/common/file-icons.png">
-        </div>
-        <div class="pure-u-1 pure-u-med-1-2 pure-u-lrg-3-5">
-
-            <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
-
+    <div id="welcome" class="splash-container">
+        <div class="splash">
+            <h1 class="splash-head" data-anijs="when: DOMContentLoaded, where: document, how: swing">AniJS</h1>
+            <p class="splash-subhead" data-anijs="when: webkitAnimationEnd, where: .splash-head, how: fadeInUp">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor.
+                <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
             </p>
         </div>
     </div>
 
-    <div class="content">
-        <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
+    <div class="content-wrapper">
+        <div id="intro" class="content">
+            <h2 class="content-head is-center">Some Cool Demo</h2>
 
-        <div class="pure-g">
-            <div class="l-box-lrg pure-u-1 pure-u-med-2-5">
-                <form class="pure-form pure-form-stacked">
-                    <fieldset>
+            <div class="pure-g">
+                <div class="l-box-lrg pure-u-1 pure-u-med-1-2">
+                        <h3 class="content-subhead">
+                            <i class="fa fa-rocket"></i>
+                            Simple Demo
+                        </h3>
+                        <div class="demo-square demo1" data-anijs="when: click, what: .l-box-lrg, how: flipInY">      
+                        </div>
+                        <p class="waveboard anijs-sintax">
+                            <span class="anijs-reserved-when anijs-reserved-word">When</span>
+                            <span>click,</span>
+                            <span class="anijs-reserved-where anijs-reserved-word">Where</span>
+                            <span>Square,</span>
+                            <span class="anijs-reserved-what anijs-reserved-word">What</span>
+                            <span>paragraphs,</span>
+                            <span class="anijs-reserved-how anijs-reserved-word">How</span>
+                            <span>hinge animation</span>
+                        </p>
+                        <pre>
+                            <code>&lt;div class="demo-square demo1" data-anijs="when: click, what: p, how: hinge" &gt;&lt;/div&gt;     
+                            </code>
+                        </pre>
+                </div>
 
-                        <label for="email">Your Name</label>
-                        <input id="email" type="text" placeholder="Your Name">
-
-
-                        <label for="email">Your Email</label>
-                        <input id="email" type="email" placeholder="Your Email">
-
-                        <label for="password">Your Password</label>
-                        <input id="password" type="password" placeholder="Your Password">
-
-                        <button type="submit" class="pure-button">Sign Up</button>
-                    </fieldset>
-                </form>
+                <div class="l-box-lrg pure-u-1 pure-u-med-1-2">
+                        <h3 class="content-subhead">
+                            <i class="fa fa-rocket"></i>
+                            Simple When, How
+                        </h3>
+                        <form class="pure-form pure-form-stacked">
+                            <fieldset>
+                                <label for="email">Your Name</label>
+                                <input id="email" type="text" placeholder="Your Name" data-anijs="when: focus, what: p, how: wobble">
+                            </fieldset>
+                        </form>
+                        <p class="waveboard anijs-sintax p-demo2">
+                            <span class="anijs-reserved-when anijs-reserved-word">When</span>
+                            <span>click,</span>
+                            <span class="anijs-reserved-where anijs-reserved-word">Where</span>
+                            <span>Square,</span>
+                            <span class="anijs-reserved-what anijs-reserved-word">What</span>
+                            <span>paragraphs,</span>
+                            <span class="anijs-reserved-how anijs-reserved-word">How</span>
+                            <span>hinge animation</span>
+                        </p>
+                        <pre data-anijs="when: webkitAnimationEnd, where: p.p-demo2, how: hinge">
+                            <code>&lt;div class="demo-square demo1" data-anijs="when: click, what: p, how: hinge" &gt;&lt;/div&gt;     
+                            </code>
+                        </pre>
+                </div>
             </div>
 
-            <div class="l-box-lrg pure-u-1 pure-u-med-3-5">
-                <h4>Contact Us</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                </p>
+        </div>
 
-                <h4>More Information</h4>
+        <div id="tryit" class="ribbon l-box-lrg pure-g">
+            <div id="try" class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                <h2 class="content-head content-head-ribbon">Would you like to try it?</h2>
+                    <div class="pure-u-1-2 pure-u-med-1-6 pure-u-lrg-1-6">
+                    <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                        <span class="anijs-reserved-when anijs-reserved-word">When</span>
+                    </div>
+                    <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                        <input type="text" class="pure-input-1-2" placeholder="some event">
+                    </div>
+                    </div>
+
+                    <div class="pure-u-1-2 pure-u-med-1-6 pure-u-lrg-1-6">
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <span class="anijs-reserved-where anijs-reserved-word">Where</span>
+                        </div>
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <input type="text" class="pure-input-1-2" placeholder="some selector">
+                        </div>
+                    </div>
+
+                    <div class="pure-u-1-2 pure-u-med-1-6 pure-u-lrg-1-6">
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <span class="anijs-reserved-what anijs-reserved-word">What</span>
+                        </div>
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <input type="text" class="pure-input-1-2" placeholder="animation target">
+                        </div>
+                    </div>
+
+                    <div class="pure-u-1-2 pure-u-med-1-6 pure-u-lrg-1-6">
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <span class="anijs-reserved-how anijs-reserved-word">How</span>
+                        </div>
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <input type="text" class="pure-input-1-2" placeholder="animation type">
+                        </div>
+                    </div>
+                <!-- </div> -->
+                <div class="pure-u-1-2 pure-u-med-1-6 pure-u-lrg-1-6">
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <span class="anijs-reserved-how anijs-reserved-word"></span>
+                        </div>
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <button class="pure-button pure-button-primary">Try it!</button>
+                        </div>
+                </div>
+                
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
+                    Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
                 </p>
             </div>
         </div>
 
+        <div id="installing" class="content">
+            <h2 class="content-head is-center">Installing</h2>
+
+            <div class="section pure-g-r">
+                <div class="center">
+                    <div class="pure-u-1">
+                        <a class="pure-button" href="#">
+                            Fork on GitHub
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a class="pure-button" href="#">
+                            Download as ZIP
+                            <i class="fa fa-floppy-o"></i>
+                        </a>
+                        <h3 class="content-subhead">Install the component using Bower</h3>
+                        <pre>$ bower install anijs</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="using" class="content">
+            <h2 class="content-head is-center">Using</h2>
+
+            <div class="section pure-g-r">
+                <div class="center">
+                    <div class="pure-u-1">
+                         <p>
+                            Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+                        </p>                           
+
+                        <pre data-anijs="when: webkitAnimationEnd, where: p.p-demo2, how: hinge">
+                            <code>&lt;script src="anijs.js" type="text/javascript"&gt;&lt;/script&gt;</code>
+                        </pre>
+
+                         <p>
+                            Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names.
+                        </p>
+         <pre><code>&lt;head&gt;
+&lt;link rel="stylesheet" href="animate.min.css"&gt;
+&lt;/head&gt;
+...
+&lt;script src="anijs.js" type="text/javascript"&gt;&lt;/script&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="documentation" class="content">
+            <h2 class="content-head is-center">Documentation</h2>
+
+            <div class="section pure-g-r">
+                <div class="center">
+                    <div class="pure-u-1">
+                         <p>
+                            Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+                        </p>                           
+                         <p>
+                            Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h2 class="content-head is-center">Contribute</h2>
+            <div class="section pure-g-r">
+                <div class="center">
+                    <div class="pure-u-1">
+                         <p>
+                            AniJS is a little baby. She need the community to crecer. All feedback, comments, issues y hasta un poco de codigo are welcome. 
+                            <i class="fa fa-smile-o"></i>
+                        </p>                           
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h2 class="content-head is-center">Aknowledgement</h2>
+            <div class="section pure-g-r">
+                <div class="center">
+                    <div class="pure-u-1">
+                         <p>
+                           To Paco, Peter, Annie and to all the persons that helped with this project.
+                            <i class="fa fa-smile-o"></i>
+                        </p>                           
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--         <div class="content">
+            <h2 class="content-head is-center">Installing</h2>
+                <div class="center">
+                    <div class="pure-u-1">
+                        <h3 class="content-subhead">Install the component using Bower</h3>
+                        <pre>$ bower install voice-elements</pre>
+                        <a class="pure-button" href="https://github.com/zenorocha/voice-elements/fork">Fork on GitHub</a>
+                        <a class="pure-button" href="https://github.com/zenorocha/voice-elements/archive/gh-pages.zip">Download as ZIP</a>
+                    </div>
+                </div>
+            <div class="pure-g">
+                <div class="l-box pure-u-1 pure-u-med-1-2 pure-u-lrg-1-4">
+
+                    <h3 class="content-subhead">
+                        <i class="fa fa-rocket"></i>
+                        Get Started Quickly
+                    </h3>
+                    <p>
+                        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    </p>
+                </div>
+                <div class="l-box pure-u-1 pure-u-med-1-2 pure-u-lrg-1-4">
+                    <h3 class="content-subhead">
+                        <i class="fa fa-mobile"></i>
+                        Responsive Layouts
+                    </h3>
+                    <p>
+                        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    </p>
+                </div>
+                <div class="l-box pure-u-1 pure-u-med-1-2 pure-u-lrg-1-4">
+                    <h3 class="content-subhead">
+                        <i class="fa fa-th-large"></i>
+                        Modular
+                    </h3>
+                    <p>
+                        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    </p>
+                </div>
+                <div class="l-box pure-u-1 pure-u-med-1-2 pure-u-lrg-1-4">
+                    <h3 class="content-subhead">
+                        <i class="fa fa-check-square-o"></i>
+                        Plays Nice
+                    </h3>
+                    <p>
+                        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    </p>
+                </div>
+            </div>
+        </div> -->
+        <div class="footer l-box is-center">
+            Made with ♥ by <a href="https://twitter.com/dariel_noel">@dariel_noel</a>.
+        </div>
+
     </div>
 
-    <div class="footer l-box is-center">
-        View the source of this layout to learn more. Made with love by the YUI Team.
-    </div>
+    <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+    <script src="lib/anijs/anijs.js"></script>
 
-</div>
+        <!-- Syntax Highlight -->
+    <link href="lib/highlight/highlight.github.css" rel="stylesheet">
+    <script src="lib/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
-<script>
-YUI().use('node-base', 'node-event-delegate', function (Y) {
-    // This just makes sure that the href="#" attached to the <a> elements
-    // don't scroll you back up the page.
-    Y.one('body').delegate('click', function (e) {
-        e.preventDefault();
-    }, 'a[href="#"]');
-});
-</script>
+    <script>
+    YUI().use('node-base', 'node-event-delegate', function(Y) {
+        // This just makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        Y.one('body').delegate('click', function(e) {
+            e.preventDefault();
+        }, 'a[href="#"]');
+
+        //The menu items are smart behavior
+        Y.one('body').delegate('click', function(e) {
+            if(!e.currentTarget.hasClass('pure-menu-selected')){
+                Y.one('.header li.pure-menu-selected').removeClass('pure-menu-selected');
+                e.currentTarget.get('parentNode').addClass('pure-menu-selected');
+            }
+        }, '.header li a');
+        
+    });
+    </script>
 
 
 
 
 
 </body>
+
 </html>

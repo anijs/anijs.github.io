@@ -151,7 +151,7 @@ a.pure-button-primary {
     position: absolute;
     top: 100px; left: 0; bottom: 0; right: 0;
     text-align: center;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
 }
 
 /* This is the main heading that appears on the blue section */
