@@ -3,6 +3,10 @@
 	text-transform: none;
 }
 
+.pure-menu.pure-menu-horizontal .pure-menu-heading{
+	float: left;
+}
+
 .demo-square{
 	height: 100px;
 	width: 100px;
@@ -67,4 +71,159 @@ pre {
 
 .footer a{
 	color: #FFE6E6;
+}
+
+.yui3-aclist-list{
+	background: white;
+
+}
+
+.yui3-aclist-item{
+	color: #34495E;
+}
+
+.yui3-aclist-item-active{
+	background: #1F8DD6;
+	color: white;
+}
+
+.yui3-aclist-item-hover{
+	background: #7CBFEB;
+	color: white;
+}
+
+
+
+#tryit input{
+	color:#7F8C8D;
+	padding: .5em .6em;
+	display: inline-block;
+	border: 1px solid #CCC;
+	box-shadow: inset 0 1px 3px #DDD;
+	border-radius: 4px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#tryit input:focus{
+	color:#7F8C8D;
+	outline: 0;
+	outline: thin dotted \9;
+	border-color: #129FEA;
+}
+
+#tryit .pure-alert{
+	opacity: 0;
+	display: none;
+}
+
+@-webkit-keyframes bounceInOut {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+    -ms-transform: scale(.3);
+    transform: scale(.3);
+  }
+
+  10% {
+  	opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bounceInOut {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+    -ms-transform: scale(.3);
+    transform: scale(.3);
+  }
+
+  10% {
+  	opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+.displayTruebounceIn {
+	-webkit-animation-name: bounceInOut;
+	animation-name: bounceIn;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+}
+
+#tryit .displayTruebounceIn{
+	display: inline-block;
+}
+
+.pure-menu.pure-menu-horizontal > ul{
+	height: auto;
+}
+
+.home-menu li a:hover, .home-menu li a:focus {
+	background: none;
+	color: #FFF;
+}
+
+.hidden{
+	display: none !important;
+}
+
+.splash-head {
+	 border: 0px solid #FFF; 
+	 padding: 0; 
+}
+
+@media (min-width: 30em){
+	.splash-subhead {
+		font-size: 120%;
+	}
+}
+
+@media (min-width: 55em){
+	.splash-subhead {
+		font-size: 140%;
+	}
+}
+
+@media (min-width: 78em){
+	.splash-head {
+		font-size: 350%;
+	}
+}
+
+.anijs-sintax i{
+	font-size: 60%;
+}
+
+.pure-form label {
+	margin: 0em 0 0;
 }
