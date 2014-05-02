@@ -9,14 +9,10 @@ YUI().use('node-base', 'node-event-delegate', 'autocomplete', 'autocomplete-high
 
 
     //Nav responsive behavior
-        
-        // Append the mobile icon nav
-        
-        Y.one('.nav').appendChild('<div class="nav-mobile" data-anijs="when: click, what: .nav-list li, how: bounceIn"></div>');
-
-        Y.one('.nav-mobile').on('click', function(e){
-            Y.one('.nav-list').toggleView();
-        });       
+    Y.one('.collapse-toggle').on('click', function(e){
+        e.preventDefault();
+        Y.one('.collapse').toggleClass('in');
+    });
 
 
 
@@ -31,112 +27,62 @@ YUI().use('node-base', 'node-event-delegate', 'autocomplete', 'autocomplete-high
     //Autocomplete
     var autocompleSources = APP_CONFIG.autoCompleteSources;
 
-    Y.one('#demowhen').plug(Y.Plugin.AutoComplete, {
+    Y.one('#demoif').plug(Y.Plugin.AutoComplete, {
         resultHighlighter: 'phraseMatch',
         resultFilters: 'phraseMatch',
         activateFirstItem: true,
-        source: autocompleSources.when
+        source: autocompleSources.if
     });
 
     //Autocomplete
-    Y.one('#demowhere').plug(Y.Plugin.AutoComplete, {
+    Y.one('#demoon').plug(Y.Plugin.AutoComplete, {
         resultHighlighter: 'phraseMatch',
         resultFilters: 'phraseMatch',
         activateFirstItem: true,
-        source: autocompleSources.where
+        source: autocompleSources.on
     });
 
     //Autocomplete
-    Y.one('#demowhat').plug(Y.Plugin.AutoComplete, {
+    Y.one('#demoto').plug(Y.Plugin.AutoComplete, {
         resultHighlighter: 'phraseMatch',
         resultFilters: 'phraseMatch',
         activateFirstItem: true,
-        source: autocompleSources.where
+        source: autocompleSources.on
     });
 
     //Autocomplete
-    Y.one('#demohow').plug(Y.Plugin.AutoComplete, {
+    Y.one('#demodo').plug(Y.Plugin.AutoComplete, {
         resultHighlighter: 'phraseMatch',
         resultFilters: 'phraseMatch',
         activateFirstItem: true,
-        source: autocompleSources.how
+        source: autocompleSources.do
     });
 
     AniJS.getHelper().validateCommandExecution = function(e, animationContext){
         console.log('ejecutando funciones de retorno');
-        var when = Y.one('#demowhen').get('value'),
-            where = Y.one('#demowhere').get('value'),
-            what = Y.one('#demowhat').get('value'),
-            how = Y.one('#demohow').get('value');
+        var event = Y.one('#demoif').get('value'),
+            eventTarget = Y.one('#demoon').get('value') || '#demoon',
+            behaviorTarget = Y.one('#demoto').get('value') || '#demoto',
+            behavior = Y.one('#demodo').get('value');
 
         //TODO: Might be necessary to valid the fields
-
+        
         //Clear the trigered event in every launch
-        AniJS.purge(where);
+        AniJS.purge(eventTarget);
 
 
         AniJS.createAnimation([{
-            when: when,
-            where: where,
-            what: what,
-            how: how
+            event: event,
+            eventTarget: eventTarget,
+            behaviorTarget: behaviorTarget,
+            behavior: behavior,
+            after: 'removeAnim'
         }]);
         console.log(e);
+
+        console.log(animationContext);
         animationContext.run();
         
     };
-
-    AniJS.run();
-
-    // Y.one('#demotryit').on('click', function(e) {
-    //     // var when = Y.one('#demowhen').get('value') || 'click',
-    //     //     where = Y.one('#demowhere').get('value') || '.navbar',
-    //     //     what = Y.one('#demowhat').get('value') || '#tryit',
-    //     //     how = Y.one('#demohow').get('value') || 'bounceIn';
-
-    //     // //TODO: Might be necessary to valid the fields
-
-    //     // //Clear the trigered event in every launch
-    //     // AniJS.purge(where);
-
-
-    //     // AniJS.createAnimation([{
-    //     //     when: when,
-    //     //     where: where,
-    //     //     what: what,
-    //     //     how: how
-    //     // }]);
-
-    //     // //Ver que se pueda pasar una function en el callback en vez de un id
-
-    //     // e.currentTarget.set('innerHTML', 'Ready');
-
-
-
-    //     //e.currentTarget.fire('ready');
-        
-
-    //     // var event = new Event('build');
-
-    //     // // Listen for the event.
-    //     // Y.one('.navbar').getDOMNode().addEventListener('build', function (e) {
-    //     //     console.log('listening');
-    //     // }, false);
-
-    //     // // Dispatch the event.
-    //     // Y.one('.navbar').getDOMNode().dispatchEvent(event);
-        
-
-
-
-    //     // Y.one('.navbar').getDOMNode().dispatchEvent(event);
-
-
-    //     // document.addEventListener('redblue', function(){
-    //     //     console.log('I heart you');
-    //     // });
-    //     // Dispatch/Trigger/Fire the event
-    //     //e.currentTarget.getDOMNode().dispatchEvent(event);
-    // });
 
 });

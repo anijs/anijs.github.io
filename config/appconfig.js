@@ -1,6 +1,6 @@
 APP_CONFIG = {
 	autoCompleteSources: {
-		where: [
+		to: [
 			'window',
 			'.container-box',
 			'.navbar',
@@ -18,7 +18,7 @@ APP_CONFIG = {
 			'l-box-lrg',
 			'.content-subhead'
 		],
-		when: [
+		if: [
 			'click',
 			'dblclick',
 			'mousedown',
@@ -35,10 +35,10 @@ APP_CONFIG = {
 			'animationend',
 			'orientationchange'
 		],
-		what: [
+		to: [
 
 		],
-		how: [
+		do: [
           'bounce',
           'flash',
           'pulse',
