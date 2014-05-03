@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <link rel="shortcut icon" type="assets/image/x-icon" href="assets/img/favicon.png">
+    <title>AniJS, Declarative handling library for CSS animations</title>
+
+    <!-- Pure CSS Library -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
+    <link rel="stylesheet" href="bower_components/pure-extras/css/pure-extras.css">
+   
+    <!-- Pure CSS Custom layout -->
+    <link rel="stylesheet" href="assets/css/main-grid.css">
+    <link rel="stylesheet" href="assets/css/layouts/marketing.css">
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="lib/flat-icon/flaticon.css">
+
+    <!-- Syntax Highlight -->
+    <link rel="stylesheet" href="lib/highlight/highlight.github.css">
+    
+    <!-- Animated CSS Animation Library -->
+    <link rel="stylesheet" href="lib/animationcss/animate.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/menu-collapse.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    
+</head>
+
+<body>
+    <div id="welcome" class="header">
+        <div class="navbar home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed" data-anijs="if: animationend, on: .container-box, to: ul li, do: bounce">
+            <a class="pure-menu-heading" href="#">AniJS</a>
+            <a class="collapse-toggle" href="#" data-anijs="if: click, do: bounceIn, to: .nav-list">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="menu" class="nav-list collapse">
+                <li class="pure-menu-selected"><a href="#welcome">Welcome</a>
+                </li>
+                <li><a href="#intro">Intro</a>
+                </li>
+                <li><a href="#tryit">Try It!</a>
+                </li>
+                <li><a href="#installing">Installing</a>
+                </li>
+                <li><a href="#using">Using</a>
+                </li>
+                <li><a href="#documentation">Documentation</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="splash-container">
+
+        <div class="balloon ball1" data-anijs="if: animationend, on: .splash-subhead, do: ball1-end;
+        if: transitionend, do: rubberBand; if: mouseover, do: rollIn, to: .ball2$.ball3$.ball4, after: removeAnim">
+            <i class="flaticon-air1 orange"></i> 
+        </div>
+        <div class="balloon ball2" data-anijs="if: animationend, on: .splash-subhead, do: ball2-end; if: transitionend, do: rubberBand; if: scroll, on: window, do: hinge, after: removeAnim; if: mouseover, do: hinge, to: .ball3$.ball4$.ball1$.splash$.pure-menu-heading, after: removeAnim">
+            <i class="flaticon-air1 pink"></i> 
+        </div>
+        <div class="balloon ball3" data-anijs="if: animationend, on: .splash-subhead, do: ball3-end; if: transitionend, do: rubberBand; if: mouseover, do: shake, to: .balloon, after: removeAnim">
+            <i class="flaticon-air1 green"></i> 
+        </div>
+        <div class="balloon ball4" data-anijs="if: animationend, on: .splash-subhead, do: ball4-end; if: transitionend, do: rubberBand; if: mouseover, do: rotateIn, to: .ball3$.ball2$.ball1, after: removeAnim">
+            <i class="flaticon-air1 white"></i> 
+        </div>
+        <div class="splash">
+            <h1 class="splash-head" data-anijs="if: DOMContentLoaded, on: document, do: swing, after: removeAnim; if: animationend, on: .balloon, do: swing, after: removeAnim">AniJS</h1>
+            <p class="splash-subhead" data-anijs="if: animationend, on: .splash-head, do: bounce, after: removeAnim">
+                Declarative handling library for CSS animations
+            </p>
+            <p>
+                <a href="#intro" class="pure-button pure-button-primary">
+                    Fork on GitHub
+                    <i class="fa fa-github"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div id="intro" class="content">
+            <h2 class="content-head is-center">Some Cool Demo</h2>
+
+            <div class="pure-g">
+                <div class="l-box-lrg container-box pure-u-1 pure-u-med-1-2">
+                    <h3 class="content-subhead">
+                        <i class="fa fa-rocket"></i>
+                        Click Square Demo
+                    </h3>
+                    <div class="demo-square demo1" data-anijs="if: click, do: flipInY, to: .container-box, after: removeAnim">
+                    </div>
+                    <p class="waveboard anijs-sintax">
+                        <i class="fa fa-asterisk"></i>
+                        <span class="anijs-reserved-if anijs-reserved-word">If</span>
+                        <span>click,</span>
+                        <span class="anijs-reserved-on anijs-reserved-word">On</span>
+                        <span>Square,</span>
+                        <span class="anijs-reserved-do anijs-reserved-word">Do</span>
+                        <span>flipInY animation</span>
+                        <span class="anijs-reserved-to anijs-reserved-word">To</span>
+                        <span>Container Boxes,</span>
+                    </p>
+                    <pre>
+                            <code>&lt;div class="demo-square demo1" data-anijs="if: click, do: flipInY, to: .container-box" &gt;&lt;/div&gt;     
+                            </code>
+                        </pre>
+                </div>
+
+                <div class="l-box-lrg container-box pure-u-1 pure-u-med-1-2">
+                    <h3 class="content-subhead">
+                        <i class="fa fa-rocket"></i>
+                        Simple Stacking Animation
+                    </h3>
+                    <form class="pure-form pure-form-stacked">
+                        <fieldset>
+                            <label for="name">Your Name</label>
+                            <input id="name" type="text" placeholder="Your Name" data-anijs="if: focus, do: wobble, to: p, after: removeAnim">
+                        </fieldset>
+                    </form>
+                    <p class="waveboard anijs-sintax p-demo2">
+                        <i class="fa fa-asterisk"></i>
+                        <span class="anijs-reserved-if anijs-reserved-word">If</span>
+                        <span>focus,</span>
+                        <span class="anijs-reserved-on anijs-reserved-word">On</span>
+                        <span>name input</span>
+                        <span class="anijs-reserved-do anijs-reserved-word">Do</span>
+                        <span>wobble animation</span>
+                        <span class="anijs-reserved-to anijs-reserved-word">To</span>
+                        <span>paragraphs,</span>
+                    </p>
+                    <p class="waveboard anijs-sintax p-demo2">
+                        <i class="fa fa-asterisk"></i>
+                        <span class="anijs-reserved-if anijs-reserved-word">If</span>
+                        <span>animationend,</span>
+                        <span class="anijs-reserved-on anijs-reserved-word">On</span>
+                        <span>This paragraph</span>
+                        <span class="anijs-reserved-do anijs-reserved-word">Do</span>
+                        <span>hinge animation</span>
+                        <span class="anijs-reserved-to anijs-reserved-word">To</span>
+                        <span>pre tag below</span>
+                    </p>
+
+
+                    <pre data-anijs="if: animationend, on: p.p-demo2, do: hinge, after: removeAnim">
+                            <code>&lt;input id="name" type="text" data-anijs="if: focus, do: wobble, to: p"&gt;
+
+&lt;pre data-anijs="if: animationend, on: p.p-demo2, do:hinge"&gt;
+                            </code>
+                        </pre>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="tryit" class="ribbon l-box-lrg container-box pure-g">
+            <div id="try" class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                <h2 class="content-head content-head-ribbon">Would you like to try it?</h2>
+                <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                    <div class="pure-alert pure-alert-succes pure-u-1-2 pure-u-med-1-3 pure-u-lrg-1-4">
+                        Animation setting up good!!!
+                    </div>
+                </div>
+
+                <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                    <div class="pure-u-1-2 pure-u-med-1-5 pure-u-lrg-1-6 small-margin">
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <span class="anijs-reserved-if anijs-reserved-word">If</span>
+                        </div>
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <input id="demoif" type="text" placeholder="some event" value="click">
+                        </div>
+                    </div>
+
+                    <div class="pure-u-1-2 pure-u-med-1-5 pure-u-lrg-1-6 small-margin">
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <span class="anijs-reserved-on anijs-reserved-word">On</span>
+                        </div>
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <input id="demoon" type="text" class="pure-input-1-2" placeholder="some selector like" value=" .navbar">
+                        </div>
+                    </div>
+
+                    <div class="pure-u-1-2 pure-u-med-1-5 pure-u-lrg-1-6 small-margin">
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <span class="anijs-reserved-do anijs-reserved-word">Do</span>
+                        </div>
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <input id="demodo" type="text" class="pure-input-1-2" placeholder="animation type like" value="wobble">
+                        </div>
+                    </div>
+                    
+                    <div class="pure-u-1-2 pure-u-med-1-5 pure-u-lrg-1-6 small-margin">
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <span class="anijs-reserved-to anijs-reserved-word">To</span>
+                        </div>
+                        <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                            <input id="demoto" type="text" class="pure-input-1-2" placeholder="animation target" value="#tryit">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- </div> -->
+                <div class="pure-u-1-2 pure-u-med-1-6 pure-u-lrg-1-6">
+                    <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                        <span class="anijs-reserved-do anijs-reserved-word"></span>
+                    </div>
+                    <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                        <button id="demotryit" class="pure-button pure-button-primary" data-anijs="if:click, do: displayTruebounceIn, to: #try .pure-alert,before:validateCommandExecution, after: removeAnim">Try it!</button>
+                    </div>
+                </div>
+
+                <p>
+                    ## Try It!!
+
+                    **If** 'some event(click, scroll, mouseover)', **On** any element (css selector), **Do** some behavior(Rotate animation), **To** (any elment).
+
+                    Read more about, [here](#sentence-definition).
+                </p>
+            </div>
+        </div>
+
+        <div id="installing" class="content">
+            <h2 class="content-head is-center">Installing</h2>
+
+            <div class="section pure-g-r">
+                <div class="center">
+                    <div class="pure-u-1 text-center">
+                        <a class="pure-button" href="#">
+                            Fork on GitHub
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a class="pure-button" href="#">
+                            Download as ZIP
+                            <i class="fa fa-floppy-o"></i>
+                        </a>
+                        <h3 class="content-subhead">Install the component using Bower</h3>
+                        <pre>$ bower install anijs</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="using" class="content">
+            <h2 class="content-head is-center">Using</h2>
+
+            <div class="section pure-g-r">
+                <div class="center">
+                    <div class="pure-u-1">
+                        <p>
+                            Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+                        </p>
+
+                        <pre data-anijs="if: animationend, on: p.p-demo2, do: hinge">
+                            <code>&lt;script src="anijs.js" type="text/javascript"&gt;&lt;/script&gt;</code>
+                        </pre>
+
+                        <p>
+                            Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names.
+                        </p>
+                        <pre><code>&lt;head&gt;
+&lt;link rel="stylesheet" href="animate.min.css"&gt;
+&lt;/head&gt;
+...
+&lt;script src="anijs.js" type="text/javascript"&gt;&lt;/script&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="documentation" class="content">
+            <h2 class="content-head is-center">Documentation</h2>
+
+            <div class="section pure-g-r">
+                <div class="center">
+                    <div class="pure-u-1">
+                        <p>
+                            Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+                        </p>
+                        <p>
+                            Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h2 class="content-head is-center">Contribute</h2>
+            <div class="section pure-g-r">
+                <div class="center">
+                    <div class="pure-u-1">
+                        <p>
+                            AniJS is a little baby. She need the community to crecer. All feedback, comments, issues y hasta un poco de codigo are welcome.
+                            <i class="fa fa-smile-o"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h2 class="content-head is-center">Aknowledgement</h2>
+            <div class="section pure-g-r">
+                <div class="center">
+                    <div class="pure-u-1">
+                        <p>
+                            To Paco, Peter, Annie and to all the persons that helped with this project.
+                            <i class="fa fa-smile-o"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer l-box is-center">
+            Made with
+            <span class="bounceIn animated infinite">♥</span>by <a href="https://twitter.com/dariel_noel">@dariel_noel</a>.
+        </div>
+
+    </div>
+
+    <!-- YUI3 Framework -->
+    <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+
+    <!-- AniJS Library -->
+    <script src="lib/anijs/anijs.js"></script>
+
+    <!-- Syntax Highlight -->
+    <script src="lib/highlight/highlight.pack.js"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <!-- App Scripts-->
+    <script src="config/appconfig.js"></script>
+    <script src="script/app.js"></script>
+
+    <!-- Google Analytics-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44521541-4', 'anijs.github.io');
+      ga('send', 'pageview');
+
+    </script>
+</body>
+
+</html>
