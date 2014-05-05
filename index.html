@@ -21,8 +21,8 @@
     <link rel="stylesheet" href="lib/flat-icon/flaticon.css">
 
     <!-- Syntax Highlight -->
-    <link rel="stylesheet" href="lib/highlight/highlight.github.css">
-    
+    <link rel="stylesheet" href="lib/highlight/markdown-highligth.css">
+
     <!-- Animated CSS Animation Library -->
     <link rel="stylesheet" href="lib/animationcss/animate.css">
 
@@ -77,17 +77,17 @@
                 Declarative handling library for CSS animations
             </p>
             <p>
-                <a href="#intro" class="pure-button pure-button-primary">
-                    Fork on GitHub
-                    <i class="fa fa-github"></i>
-                </a>
+               <iframe class="first-iframe" data-anijs="if: animationend, on: .splash-head, do: hinge, after: removeAnim" src="http://ghbtns.com/github-btn.html?user=anijs&repo=anijs&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="152" height="30"></iframe>
+                <iframe data-anijs="if: animationend, on: .first-iframe, do: rubberBand, after: removeAnim" src="http://ghbtns.com/github-btn.html?user=anijs&repo=anijs&type=fork&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="156" height="30"></iframe>
             </p>
         </div>
     </div>
 
     <div class="content-wrapper">
         <div id="intro" class="content">
-            <h2 class="content-head is-center">Some Cool Demo</h2>
+            <h2 class="content-head is-center">A little demo</h2>
 
             <div class="pure-g">
                 <div class="l-box-lrg container-box pure-u-1 pure-u-med-1-2">
@@ -108,10 +108,10 @@
                         <span class="anijs-reserved-to anijs-reserved-word">To</span>
                         <span>Container Boxes,</span>
                     </p>
-                    <pre>
-                            <code>&lt;div class="demo-square demo1" data-anijs="if: click, do: flipInY, to: .container-box" &gt;&lt;/div&gt;     
-                            </code>
-                        </pre>
+<!-- Syntax Highlight -->
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo-square demo1"</span> <span class="na">data-anijs=</span><span class="s">"if: click, do: flipInY, to: .container-box"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</pre></div>
+<!-- End Syntax Highlight -->
                 </div>
 
                 <div class="l-box-lrg container-box pure-u-1 pure-u-med-1-2">
@@ -147,14 +147,10 @@
                         <span class="anijs-reserved-to anijs-reserved-word">To</span>
                         <span>pre tag below</span>
                     </p>
-
-
-                    <pre data-anijs="if: animationend, on: p.p-demo2, do: hinge, after: removeAnim">
-                            <code>&lt;input id="name" type="text" data-anijs="if: focus, do: wobble, to: p"&gt;
-
-&lt;pre data-anijs="if: animationend, on: p.p-demo2, do:hinge"&gt;
-                            </code>
-                        </pre>
+<!-- Syntax Highlight -->
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">data-anijs=</span><span class="s">"if: focus, do: wobble, to: p"</span><span class="nt">&gt;</span>
+</pre></div>
+<!-- End Syntax Highlight -->
                 </div>
             </div>
 
@@ -164,7 +160,7 @@
             <div id="try" class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
                 <h2 class="content-head content-head-ribbon">Would you like to try it?</h2>
                 <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
-                    <div class="pure-alert pure-alert-succes pure-u-1-2 pure-u-med-1-3 pure-u-lrg-1-4">
+                    <div id="demo-message" class="pure-alert pure-alert-succes pure-u-1-2 pure-u-med-1-3 pure-u-lrg-1-4">
                         Animation setting up good!!!
                     </div>
                 </div>
@@ -219,11 +215,10 @@
                 </div>
 
                 <p>
-                    ## Try It!!
-
-                    **If** 'some event(click, scroll, mouseover)', **On** any element (css selector), **Do** some behavior(Rotate animation), **To** (any elment).
-
-                    Read more about, [here](#sentence-definition).
+                    <span class="anijs-reserved-if anijs-reserved-word">If</span> some event(click, scroll, mouseover), <span class="anijs-reserved-on anijs-reserved-word">On</span> any element (css selector), <span class="anijs-reserved-do anijs-reserved-word">Do</span> some behavior(Rotate animation), <span class="anijs-reserved-to anijs-reserved-word">To</span> (any element).
+                </p>
+                <p style="color: white;">
+                    Read more about <a style="text-decoration: underline;color:white" href="https://github.com/anijs/anijs/wiki/Sentence-Definitions">here</a>.
                 </p>
             </div>
         </div>
@@ -234,11 +229,11 @@
             <div class="section pure-g-r">
                 <div class="center">
                     <div class="pure-u-1 text-center">
-                        <a class="pure-button" href="#">
+                        <a class="pure-button" href="https://github.com/anijs/anijs">
                             Fork on GitHub
                             <i class="fa fa-github"></i>
                         </a>
-                        <a class="pure-button" href="#">
+                        <a class="pure-button" href="https://github.com/anijs/anijs/archive/master.zip">
                             Download as ZIP
                             <i class="fa fa-floppy-o"></i>
                         </a>
@@ -254,22 +249,42 @@
             <div class="section pure-g-r">
                 <div class="center">
                     <div class="pure-u-1">
+                        <p>Put the AniJS file on your page.</p>
+                        
+                        <!-- Syntax Highlight -->
+                        <div class="highlight highlight-xml" data-anijs="if: animationend, on: p.p-demo2, do: hinge, after: removeAnim"><pre><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"anijs-min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></pre></div>
+                 
                         <p>
-                            Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+                        Include the CSS animation styles definition, we strongly recomend you  to use the amazing <a href="http://daneden.github.io/animate.css/">animate.css library</a> as starting point, this library provides beautiful animations. Also, you can define your own animations.
                         </p>
 
-                        <pre data-anijs="if: animationend, on: p.p-demo2, do: hinge">
-                            <code>&lt;script src="anijs.js" type="text/javascript"&gt;&lt;/script&gt;</code>
-                        </pre>
+<!-- Syntax Highlight -->
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;head&gt;</span>
+    <span class="c">&lt;!-- Animate.css library --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://cdn.jsdelivr.net/animatecss/3.1.0/animate.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</pre></div>
+<!-- End Syntax Highlight -->
+                        <p>Start playing by adding <strong>anijs-data</strong> tag to any HTML element.</p>
 
-                        <p>
-                            Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names.
-                        </p>
-                        <pre><code>&lt;head&gt;
-&lt;link rel="stylesheet" href="animate.min.css"&gt;
-&lt;/head&gt;
-...
-&lt;script src="anijs.js" type="text/javascript"&gt;&lt;/script&gt;</code></pre>
+<!-- Syntax Highlight -->
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;header</span> <span class="na">data-anijs=</span><span class="s">"if: click, do: flipInY"</span><span class="nt">&gt;</span>
+     <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;/header&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">data-anijs=</span><span class="s">"if: scroll, on: window, do: swing, to: footer"</span><span class="nt">&gt;</span>
+     <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"main"</span> <span class="na">data-anijs=</span><span class="s">"if: DOMContentLoaded, on: document, do: swing"</span><span class="nt">&gt;</span>
+     <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;footer&gt;</span>
+     <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;/footer&gt;</span>
+ <span class="nt">&lt;/body&gt;</span>
+</pre></div>
+<!-- End Syntax Highlight -->
+
                     </div>
                 </div>
             </div>
@@ -280,12 +295,7 @@
             <div class="section pure-g-r">
                 <div class="center">
                     <div class="pure-u-1">
-                        <p>
-                            Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
-                        </p>
-                        <p>
-                            Little explain that the lo indespensable to work in this demostration. Links to the posibles events. Also to the diferents animation names.
-                        </p>
+                        <p>Documentation Topics can be founded in the <a href="https://github.com/anijs/anijs/wiki">Wiki Pages</a>.</p>
                     </div>
                 </div>
             </div>
@@ -295,10 +305,7 @@
             <div class="section pure-g-r">
                 <div class="center">
                     <div class="pure-u-1">
-                        <p>
-                            AniJS is a little baby. She need the community to crecer. All feedback, comments, issues y hasta un poco de codigo are welcome.
-                            <i class="fa fa-smile-o"></i>
-                        </p>
+                        <p>AniJS is like a little girl, she needs <a href="http://www.youtube.com/watch?v=7CeNIDWtlo0#t=774">hungry and foolish</a> community people to grow up healthy. All your <a href="https://github.com/anijs/anijs/issues">issues</a>, <a href="https://github.com/anijs/anijs/pulls">pull requests</a> and <a href="https://github.com/anijs/anijs">stars ;) </a> are welcome. <i class="fa fa-smile-o"></i></p>
                     </div>
                 </div>
             </div>
@@ -308,10 +315,7 @@
             <div class="section pure-g-r">
                 <div class="center">
                     <div class="pure-u-1">
-                        <p>
-                            To Paco, Peter, Annie and to all the persons that helped with this project.
-                            <i class="fa fa-smile-o"></i>
-                        </p>
+                        <p>To <a href="mailto:anisilv@gmail.com">Ms. Ana Silvia Tellería</a>, <a href="mailto:gallego@gmail.com">Mr. Yolier Galán</a>, <a href="mailto:voltusv@gmail.com">Mr. René González</a>, <a href="juliorubcan@gmail.com">Mr. Julio Cañizares</a> and to all the persons that helped with this project.</p>
                     </div>
                 </div>
             </div>
