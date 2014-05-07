@@ -269,19 +269,20 @@
 
 <!-- Syntax Highlight -->
 <div class="highlight highlight-xml"><pre><span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;header</span> <span class="na">data-anijs=</span><span class="s">"if: click, do: flipInY"</span><span class="nt">&gt;</span>
-     <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;header</span> <span class="na">data-anijs=</span><span class="s">"if: click, do: flipInY animated, after: removeAnim"</span><span class="nt">&gt;</span>
+        header
     <span class="nt">&lt;/header&gt;</span>
-    <span class="nt">&lt;nav</span> <span class="na">data-anijs=</span><span class="s">"if: scroll, on: window, do: swing, to: footer"</span><span class="nt">&gt;</span>
-     <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">data-anijs=</span><span class="s">"if: scroll, on: window, do: swing animated, to: footer"</span><span class="nt">&gt;</span>
+        nav
     <span class="nt">&lt;/nav&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"main"</span> <span class="na">data-anijs=</span><span class="s">"if: DOMContentLoaded, on: document, do: swing"</span><span class="nt">&gt;</span>
-     <span class="c">&lt;!-- ... --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"main"</span> <span class="na">data-anijs=</span><span class="s">"if: DOMContentLoaded, on: document, do: swing animated"</span><span class="nt">&gt;</span>
+        if: DOMContentLoaded, on: document, do: swing animated, after: removeAnim
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;footer&gt;</span>
-     <span class="c">&lt;!-- ... --&gt;</span>
+        footer
     <span class="nt">&lt;/footer&gt;</span>
- <span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"bower_components/anijs/dist/anijs-min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
 </pre></div>
 <!-- End Syntax Highlight -->
 
