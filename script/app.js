@@ -1,7 +1,6 @@
 YUI().use('node-base', 'node-event-delegate', 'autocomplete', 'autocomplete-highlighters','autocomplete-filters', 'transition', function(Y) {
     
-    console.log(AniJS);
-    
+
     //Setting default class adding when anim
     AniJS.setClassNamesWhenAnim('animated');
 

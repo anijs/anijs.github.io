@@ -72,7 +72,7 @@
             <i class="flaticon-air1 white"></i> 
         </div>
         <div class="splash">
-            <h1 class="splash-head" data-anijs="if: DOMContentLoaded, on: document, do: swing, after: removeAnim; if: animationend, on: .balloon, do: swing, after: removeAnim">AniJS</h1>
+            <h1 class="splash-head" data-anijs="if: load, on: window, do: swing, after: removeAnim; if: animationend, on: .balloon, do: swing, after: removeAnim">AniJS</h1>
             <p class="splash-subhead" data-anijs="if: animationend, on: .splash-head, do: bounce, after: removeAnim">
                 Declarative handling library for CSS animations
             </p>
@@ -87,7 +87,7 @@
 
     <div class="content-wrapper">
         <div id="intro" class="content">
-            <h2 class="content-head is-center">A little demo</h2>
+            <h2 class="content-head is-center" data-anijs="if: click, do: testingAnim">A little demo</h2>
 
             <div class="pure-g">
                 <div class="l-box-lrg container-box pure-u-1 pure-u-med-1-2">
@@ -275,8 +275,8 @@
     <span class="nt">&lt;nav</span> <span class="na">data-anijs=</span><span class="s">"if: scroll, on: window, do: swing animated, to: footer"</span><span class="nt">&gt;</span>
         nav
     <span class="nt">&lt;/nav&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"main"</span> <span class="na">data-anijs=</span><span class="s">"if: DOMContentLoaded, on: document, do: swing animated"</span><span class="nt">&gt;</span>
-        if: DOMContentLoaded, on: document, do: swing animated, after: removeAnim
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"main"</span> <span class="na">data-anijs=</span><span class="s">"if: load, on: window, do: swing animated"</span><span class="nt">&gt;</span>
+        if: load, on: window, do: swing animated, after: removeAnim
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;footer&gt;</span>
         footer
