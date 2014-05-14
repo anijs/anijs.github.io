@@ -35,6 +35,9 @@ YUI().use('node-base', 'node-event-delegate', 'autocomplete', 'autocomplete-high
         
     };
 
+
+    
+
     //Autocomplete
     var autocompleSources = APP_CONFIG.autoCompleteSources,
         autocompleteConfig = [
