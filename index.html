@@ -58,28 +58,28 @@
 
     <div class="splash-container">
 
-        <div class="balloon ball1" data-anijs="if: animationend, on: .splash-subhead, do: ball1-end;
-        if: transitionend, do: rubberBand; if: mouseover, do: rollIn, to: .ball2$.ball3$.ball4, after: removeAnim">
+        <div class="balloon ball1" data-anijs="if: animationend, on: .splash-subhead, do: ball1-end, after: holdAnimClass;
+        if: transitionend, do: rubberBand; if: mouseover, do: rollIn, to: .ball2$.ball3$.ball4">
             <i class="flaticon-air1 orange"></i> 
         </div>
-        <div class="balloon ball2" data-anijs="if: animationend, on: .splash-subhead, do: ball2-end; if: transitionend, do: rubberBand; if: scroll, on: window, do: hinge, after: removeAnim; if: mouseover, do: hinge, to: .ball3$.ball4$.ball1$.splash$.pure-menu-heading, after: removeAnim">
+        <div class="balloon ball2" data-anijs="if: animationend, on: .splash-subhead, do: ball2-end, after: holdAnimClass; if: transitionend, do: rubberBand; if: scroll, on: window, do: hinge; if: mouseover, do: hinge, to: .ball3$.ball4$.ball1$.splash$.pure-menu-heading">
             <i class="flaticon-air1 pink"></i> 
         </div>
-        <div class="balloon ball3" data-anijs="if: animationend, on: .splash-subhead, do: ball3-end; if: transitionend, do: rubberBand; if: mouseover, do: shake, to: .balloon, after: removeAnim">
+        <div class="balloon ball3" data-anijs="if: animationend, on: .splash-subhead, do: ball3-end, after: holdAnimClass; if: transitionend, do: rubberBand; if: mouseover, do: shake, to: .balloon">
             <i class="flaticon-air1 green"></i> 
         </div>
-        <div class="balloon ball4" data-anijs="if: animationend, on: .splash-subhead, do: ball4-end; if: transitionend, do: rubberBand; if: mouseover, do: rotateIn, to: .ball3$.ball2$.ball1, after: removeAnim">
+        <div class="balloon ball4" data-anijs="if: animationend, on: .splash-subhead, do: ball4-end, after: holdAnimClass; if: transitionend, do: rubberBand; if: mouseover, do: rotateIn, to: .ball3$.ball2$.ball1">
             <i class="flaticon-air1 white"></i> 
         </div>
         <div class="splash">
-            <h1 class="splash-head" data-anijs="if: load, on: window, do: swing, after: removeAnim; if: animationend, on: .balloon, do: swing, after: removeAnim">AniJS</h1>
-            <p class="splash-subhead" data-anijs="if: animationend, on: .splash-head, do: bounce, after: removeAnim">
+            <h1 class="splash-head" data-anijs="if: load, on: window, do: swing; if: animationend, on: .balloon, do: swing">AniJS</h1>
+            <p class="splash-subhead" data-anijs="if: animationend, on: .splash-head, do: bounce">
                 Declarative handling library for CSS animations
             </p>
             <p>
-               <iframe class="first-iframe" data-anijs="if: animationend, on: .splash-head, do: hinge, after: removeAnim" src="http://ghbtns.com/github-btn.html?user=anijs&repo=anijs&type=watch&count=true&size=large"
+               <iframe class="first-iframe" data-anijs="if: animationend, on: .splash-head, do: hinge" src="http://ghbtns.com/github-btn.html?user=anijs&repo=anijs&type=watch&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="152" height="30"></iframe>
-                <iframe data-anijs="if: animationend, on: .first-iframe, do: rubberBand, after: removeAnim" src="http://ghbtns.com/github-btn.html?user=anijs&repo=anijs&type=fork&count=true&size=large"
+                <iframe data-anijs="if: animationend, on: .first-iframe, do: rubberBand" src="http://ghbtns.com/github-btn.html?user=anijs&repo=anijs&type=fork&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="156" height="30"></iframe>
             </p>
         </div>
@@ -95,7 +95,7 @@
                         <i class="fa fa-rocket"></i>
                         Click Square Demo
                     </h3>
-                    <div class="demo-square demo1" data-anijs="if: click, do: flipInY, to: .container-box, after: removeAnim">
+                    <div class="demo-square demo1" data-anijs="if: click, do: flipInY, to: .container-box">
                     </div>
                     <p class="waveboard anijs-sintax">
                         <i class="fa fa-asterisk"></i>
@@ -122,7 +122,7 @@
                     <form class="pure-form pure-form-stacked">
                         <fieldset>
                             <label for="name">Your Name</label>
-                            <input id="name" type="text" placeholder="Your Name" data-anijs="if: focus, do: wobble, to: p, after: removeAnim">
+                            <input id="name" type="text" placeholder="Your Name" data-anijs="if: focus, do: wobble, to: p">
                         </fieldset>
                     </form>
                     <p class="waveboard anijs-sintax p-2-demo2">
@@ -148,7 +148,7 @@
                         <span>pre tag below</span>
                     </p>
 <!-- Syntax Highlight -->
-<div class="highlight highlight-xml" data-anijs="if: animationend, on:.p-2-demo2, do:hinge, after:removeAnim"><pre><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">data-anijs=</span><span class="s">"if: focus, do: wobble, to: p"</span><span class="nt">&gt;</span>
+<div class="highlight highlight-xml" data-anijs="if: animationend, on:.p-2-demo2, do:hinge"><pre><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"name"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">data-anijs=</span><span class="s">"if: focus, do: wobble, to: p"</span><span class="nt">&gt;</span>
 </pre></div>
 <!-- End Syntax Highlight -->
                 </div>
@@ -210,7 +210,7 @@
                         <span class="anijs-reserved-do anijs-reserved-word"></span>
                     </div>
                     <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
-                        <button id="demotryit" class="pure-button pure-button-primary" data-anijs="if:click, do: displayTruebounceIn, to: #try .pure-alert,before:validateCommandExecution, after: removeAnim">Try it!</button>
+                        <button id="demotryit" class="pure-button pure-button-primary" data-anijs="if:click, do: displayTruebounceIn, to: #try .pure-alert,before:validateCommandExecution">Try it!</button>
                     </div>
                 </div>
 
@@ -252,7 +252,7 @@
                         <p>Put the AniJS file on your page or <a href="https://github.com/anijs/anijs/wiki/Using-amd">use AMD</a>.</p>
                         
                         <!-- Syntax Highlight -->
-                        <div class="highlight highlight-xml" data-anijs="if: animationend, on: p.p-demo2, do: hinge, after: removeAnim"><pre><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"anijs-min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></pre></div>
+                        <div class="highlight highlight-xml" data-anijs="if: animationend, on: p.p-demo2, do: hinge"><pre><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"anijs-min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></pre></div>
                  
                         <p>
                         Include the CSS animation styles definition, we strongly recomend you  to use the amazing <a href="http://daneden.github.io/animate.css/">animate.css library</a> as starting point, this library provides beautiful animations. Also, you can define your own animations.
@@ -269,14 +269,14 @@
 
 <!-- Syntax Highlight -->
 <div class="highlight highlight-xml"><pre><span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;header</span> <span class="na">data-anijs=</span><span class="s">"if: click, do: flipInY animated, after: removeAnim"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;header</span> <span class="na">data-anijs=</span><span class="s">"if: click, do: flipInY animated"</span><span class="nt">&gt;</span>
         header
     <span class="nt">&lt;/header&gt;</span>
     <span class="nt">&lt;nav</span> <span class="na">data-anijs=</span><span class="s">"if: scroll, on: window, do: swing animated, to: footer"</span><span class="nt">&gt;</span>
         nav
     <span class="nt">&lt;/nav&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"main"</span> <span class="na">data-anijs=</span><span class="s">"if: load, on: window, do: swing animated"</span><span class="nt">&gt;</span>
-        if: load, on: window, do: swing animated, after: removeAnim
+        if: load, on: window, do: swing animated
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;footer&gt;</span>
         footer
@@ -333,7 +333,7 @@
         </div>
         <div class="footer l-box is-center">
             Made with
-            <span class="bounceIn animated infinite">♥</span>by <a href="https://twitter.com/dariel_noel">@dariel_noel</a>.
+            <span class="bounceIn animated infinite">♥</span> by <a href="https://twitter.com/dariel_noel">@dariel_noel</a>.
         </div>
 
     </div>

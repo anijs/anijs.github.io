@@ -1,0 +1,251 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'spm@ninja',
+1 verbose cli   '-g' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose cache add [ 'spm@ninja', null ]
+5 verbose cache add name=undefined spec="spm@ninja" args=["spm@ninja",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'spm@ninja',
+6 verbose parsed url   path: 'spm@ninja',
+6 verbose parsed url   href: 'spm@ninja' }
+7 verbose cache add name="spm" spec="ninja" args=["spm","ninja"]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'ninja',
+8 verbose parsed url   path: 'ninja',
+8 verbose parsed url   href: 'ninja' }
+9 verbose addNamed [ 'spm', 'ninja' ]
+10 verbose addNamed [ null, null ]
+11 silly lockFile b0db3957-spm-ninja spm@ninja
+12 verbose lock spm@ninja /home/dariel/.npm/b0db3957-spm-ninja.lock
+13 info addNameTag [ 'spm', 'ninja' ]
+14 verbose url raw spm
+15 verbose url resolving [ 'https://registry.npmjs.org/', './spm' ]
+16 verbose url resolved https://registry.npmjs.org/spm
+17 info trying registry request attempt 1 at 15:18:56
+18 verbose etag "BET3ZSPRKONYDCAIFBQN7FHPT"
+19 http GET https://registry.npmjs.org/spm
+20 http 304 https://registry.npmjs.org/spm
+21 silly registry.get cb [ 304,
+21 silly registry.get   { date: 'Wed, 14 May 2014 19:48:53 GMT',
+21 silly registry.get     server: 'Apache',
+21 silly registry.get     via: '1.1 varnish',
+21 silly registry.get     'last-modified': 'Wed, 14 May 2014 19:48:53 GMT',
+21 silly registry.get     'cache-control': 'max-age=1',
+21 silly registry.get     etag: '"BET3ZSPRKONYDCAIFBQN7FHPT"',
+21 silly registry.get     'x-served-by': 'cache-v37-ASH',
+21 silly registry.get     'x-cache': 'MISS',
+21 silly registry.get     'x-cache-hits': '0',
+21 silly registry.get     'x-timer': 'S1400096933.871489763,VS0,VE9',
+21 silly registry.get     vary: 'Accept',
+21 silly registry.get     'content-length': '0',
+21 silly registry.get     'keep-alive': 'timeout=10, max=50',
+21 silly registry.get     connection: 'Keep-Alive' } ]
+22 verbose etag spm from cache
+23 verbose addNamed [ 'spm', '3.0.0-rc6' ]
+24 verbose addNamed [ '3.0.0-rc6', '3.0.0-rc6' ]
+25 silly lockFile d99326ed-spm-3-0-0-rc6 spm@3.0.0-rc6
+26 verbose lock spm@3.0.0-rc6 /home/dariel/.npm/d99326ed-spm-3-0-0-rc6.lock
+27 silly lockFile d99326ed-spm-3-0-0-rc6 spm@3.0.0-rc6
+28 silly lockFile d99326ed-spm-3-0-0-rc6 spm@3.0.0-rc6
+29 silly lockFile b0db3957-spm-ninja spm@ninja
+30 silly lockFile b0db3957-spm-ninja spm@ninja
+31 silly resolved [ { name: 'spm',
+31 silly resolved     version: '3.0.0-rc6',
+31 silly resolved     preferGlobal: 'true',
+31 silly resolved     description: 'Static Package Manager',
+31 silly resolved     author: { name: 'Hsiaoming Yang', email: 'me@lepture.com' },
+31 silly resolved     repository: { type: 'git', url: 'https://github.com/spmjs/spm.git' },
+31 silly resolved     keywords:
+31 silly resolved      [ 'seajs',
+31 silly resolved        'module',
+31 silly resolved        'cmd',
+31 silly resolved        'spmjs',
+31 silly resolved        'package',
+31 silly resolved        'tool',
+31 silly resolved        'command line',
+31 silly resolved        'browser' ],
+31 silly resolved     dependencies:
+31 silly resolved      { 'win-spawn': '~2.0.0',
+31 silly resolved        inherits: '~1.0.0',
+31 silly resolved        fstream: '~0.1.25',
+31 silly resolved        'fstream-ignore': '~0.0.7',
+31 silly resolved        semver: '~2.2.1',
+31 silly resolved        async: '~0.2.9',
+31 silly resolved        tar: '~0.1.19',
+31 silly resolved        'form-data': '~0.1.2',
+31 silly resolved        request: '~2.34.0',
+31 silly resolved        colorful: '~2.1.0',
+31 silly resolved        commander: '~1.3.2',
+31 silly resolved        archy: '~0.0.2',
+31 silly resolved        rimraf: '~2.2.5',
+31 silly resolved        spmrc: '~1.0.0',
+31 silly resolved        nico: 'git://github.com/afc163/nico',
+31 silly resolved        'mocha-browser': 'git://github.com/afc163/mocha-browser',
+31 silly resolved        lodash: '~2.4.1',
+31 silly resolved        grunt: '~0.4.2',
+31 silly resolved        'grunt-init': '~0.2.1',
+31 silly resolved        jscoverage: '~0.3.8',
+31 silly resolved        exeq: '~0.4.0',
+31 silly resolved        requires: '~1.0.1',
+31 silly resolved        'gulp-uglify': '~0.2.1',
+31 silly resolved        'gulp-cssmin': '~0.1.4',
+31 silly resolved        'gulp-beautify': '~1.0.3',
+31 silly resolved        'gulp-clean': '~0.2.4',
+31 silly resolved        'gulp-zip': '~0.3.4',
+31 silly resolved        umi: '~0.1.0',
+31 silly resolved        gulp: '~3.6.2',
+31 silly resolved        'gulp-if': '~1.1.0',
+31 silly resolved        multipipe: '~0.0.2' },
+31 silly resolved     devDependencies:
+31 silly resolved      { sinon: '*',
+31 silly resolved        jshint: '*',
+31 silly resolved        mocha: '*',
+31 silly resolved        should: '*',
+31 silly resolved        istanbul: '*',
+31 silly resolved        glob: '*',
+31 silly resolved        'gulp-clean': '*',
+31 silly resolved        'gulp-unzip': '*' },
+31 silly resolved     bin: { spm: 'bin/spm' },
+31 silly resolved     engines: { node: '>=0.10.0' },
+31 silly resolved     scripts: { preinstall: 'node scripts/preinstall.js', test: 'make test' },
+31 silly resolved     readme: '# Static Package Manager\n\n[![Build Status](https://travis-ci.org/spmjs/spm.png)](https://travis-ci.org/spmjs/spm)\n\nThe brand new static package manager for browser.\n\n**spm 3.0.0 还在开发中，请先使用 [spm2](https://github.com/spmjs/spm/tree/2.x)**\n\n![](https://i.alipayobjects.com/i/localhost/png/201404/2YQxOTYoFp.png)\n\n---\n\n## Install\n\n```bash\n$ npm install spm@ninja -g\n```\n\n## Usage\n\n- Getting Started: http://spmjs.io/documentation\n- Develop a package: http://spmjs.io/documentation/develop-a-package\n\n## Packaging Server\n\n- Website: http://spmjs.io/\n- Source: https://github.com/spmjs/spmjs.io/\n\n## Report a issue\n\n* [All issues](https://github.com/spmjs/spm/issues)\n* [New issue](https://github.com/spmjs/spm/issues/new)\n\n## License\n\nSPM is available under the terms of the MIT License.\n',
+31 silly resolved     readmeFilename: 'README.md',
+31 silly resolved     bugs: { url: 'https://github.com/spmjs/spm/issues' },
+31 silly resolved     homepage: 'https://github.com/spmjs/spm',
+31 silly resolved     _id: 'spm@3.0.0-rc6',
+31 silly resolved     _from: 'spm@ninja' } ]
+32 info install spm@3.0.0-rc6 into /usr/local/lib
+33 info installOne spm@3.0.0-rc6
+34 info /usr/local/lib/node_modules/spm unbuild
+35 verbose tar unpack /home/dariel/.npm/spm/3.0.0-rc6/package.tgz
+36 silly lockFile efc20bee-r-usr-local-lib-node-modules-spm tar:///usr/local/lib/node_modules/spm
+37 verbose lock tar:///usr/local/lib/node_modules/spm /home/dariel/.npm/efc20bee-r-usr-local-lib-node-modules-spm.lock
+38 silly lockFile 7329cf52-el-npm-spm-3-0-0-rc6-package-tgz tar:///home/dariel/.npm/spm/3.0.0-rc6/package.tgz
+39 verbose lock tar:///home/dariel/.npm/spm/3.0.0-rc6/package.tgz /home/dariel/.npm/7329cf52-el-npm-spm-3-0-0-rc6-package-tgz.lock
+40 silly gunzTarPerm modes [ '755', '644' ]
+41 silly gunzTarPerm extractEntry package.json
+42 silly gunzTarPerm extractEntry .npmignore
+43 silly gunzTarPerm extractEntry README.md
+44 silly gunzTarPerm extractEntry LICENSE
+45 silly gunzTarPerm extractEntry index.js
+46 silly gunzTarPerm extractEntry CONTRIBUTING.md
+47 silly gunzTarPerm extractEntry Makefile
+48 silly gunzTarPerm extractEntry bin/spm-login
+49 silly gunzTarPerm extractEntry bin/spm
+50 silly gunzTarPerm extractEntry bin/spm-config
+51 silly gunzTarPerm extractEntry bin/spm-doc
+52 silly gunzTarPerm extractEntry bin/spm-info
+53 silly gunzTarPerm extractEntry bin/spm-init
+54 silly gunzTarPerm extractEntry bin/spm-install
+55 silly gunzTarPerm extractEntry bin/spm-build
+56 silly gunzTarPerm extractEntry bin/spm-plugin
+57 silly gunzTarPerm extractEntry bin/spm-publish
+58 silly gunzTarPerm extractEntry bin/spm-search
+59 silly gunzTarPerm extractEntry bin/spm-test
+60 silly gunzTarPerm extractEntry bin/spm-tree
+61 silly gunzTarPerm extractEntry bin/spm-unpublish
+62 silly gunzTarPerm extractEntry lib/build.js
+63 silly gunzTarPerm extractEntry lib/doc.js
+64 silly gunzTarPerm extractEntry lib/info.js
+65 silly gunzTarPerm extractEntry lib/unpublish.js
+66 silly gunzTarPerm extractEntry lib/install.js
+67 silly gunzTarPerm extractEntry lib/login.js
+68 silly gunzTarPerm extractEntry lib/config.js
+69 silly gunzTarPerm extractEntry lib/publish.js
+70 silly gunzTarPerm extractEntry lib/search.js
+71 silly gunzTarPerm extractEntry lib/plugin.js
+72 silly gunzTarPerm extractEntry lib/sdk/file.js
+73 silly gunzTarPerm extractEntry lib/sdk/git.js
+74 silly gunzTarPerm extractEntry lib/sdk/iduri.js
+75 silly gunzTarPerm extractEntry lib/sdk/module.js
+76 silly gunzTarPerm extractEntry lib/sdk/yuan.js
+77 silly gunzTarPerm extractEntry lib/theme/.npmignore
+78 silly gunzTarPerm extractEntry lib/theme/nico.js
+79 silly gunzTarPerm extractEntry lib/theme/theme.js
+80 silly gunzTarPerm extractEntry lib/theme/utils.js
+81 silly gunzTarPerm extractEntry lib/theme/static/css/OpenSans-Bold.woff
+82 silly gunzTarPerm extractEntry lib/theme/static/css/OpenSans.woff
+83 silly gunzTarPerm extractEntry lib/theme/static/css/favicon.ico
+84 silly gunzTarPerm extractEntry lib/theme/static/css/gray_jean.png
+85 silly gunzTarPerm extractEntry lib/theme/static/css/history-tags.png
+86 silly gunzTarPerm extractEntry lib/theme/static/css/mocha.css
+87 silly gunzTarPerm extractEntry lib/theme/static/css/normalize.css
+88 silly gunzTarPerm extractEntry lib/theme/static/css/site.css
+89 silly gunzTarPerm extractEntry lib/theme/static/css/solarized.css
+90 silly gunzTarPerm extractEntry lib/theme/static/js/html5shiv.js
+91 silly gunzTarPerm extractEntry lib/theme/static/js/mocha.js
+92 silly gunzTarPerm extractEntry lib/theme/templates/history.html
+93 silly gunzTarPerm extractEntry lib/theme/templates/iframe.html
+94 silly gunzTarPerm extractEntry lib/theme/templates/layout.html
+95 silly gunzTarPerm extractEntry lib/theme/templates/mocha-runner.html
+96 silly gunzTarPerm extractEntry lib/theme/templates/post.html
+97 silly gunzTarPerm extractEntry lib/theme/templates/snippet/foot.html
+98 silly gunzTarPerm extractEntry lib/theme/templates/snippet/head.html
+99 silly gunzTarPerm extractEntry lib/init-template/template.js
+100 silly gunzTarPerm extractEntry lib/init-template/rename.json
+101 silly gunzTarPerm extractEntry lib/init-template/root/package.json
+102 silly gunzTarPerm extractEntry lib/init-template/root/.npmignore
+103 silly gunzTarPerm extractEntry lib/init-template/root/README.md
+104 silly gunzTarPerm extractEntry lib/init-template/root/index.js
+105 silly gunzTarPerm extractEntry lib/init-template/root/.spmignore
+106 silly gunzTarPerm extractEntry lib/init-template/root/HISTORY.md
+107 silly gunzTarPerm extractEntry lib/init-template/root/examples/index.md
+108 silly gunzTarPerm extractEntry lib/init-template/root/tests/name-spec.js
+109 silly gunzTarPerm extractEntry lib/utils/index.js
+110 silly gunzTarPerm extractEntry lib/utils/log.js
+111 silly gunzTarPerm extractEntry lib/utils/program.js
+112 silly gunzTarPerm extractEntry lib/utils/run.js
+113 silly gunzTarPerm extractEntry lib/utils/tar.js
+114 silly gunzTarPerm extractEntry scripts/preinstall.js
+115 silly gunzTarPerm extractEntry scripts/githooks/post-merge
+116 silly gunzTarPerm extractEntry scripts/githooks/pre-commit
+117 silly lockFile efc20bee-r-usr-local-lib-node-modules-spm tar:///usr/local/lib/node_modules/spm
+118 silly lockFile efc20bee-r-usr-local-lib-node-modules-spm tar:///usr/local/lib/node_modules/spm
+119 silly lockFile 7329cf52-el-npm-spm-3-0-0-rc6-package-tgz tar:///home/dariel/.npm/spm/3.0.0-rc6/package.tgz
+120 silly lockFile 7329cf52-el-npm-spm-3-0-0-rc6-package-tgz tar:///home/dariel/.npm/spm/3.0.0-rc6/package.tgz
+121 info preinstall spm@3.0.0-rc6
+122 verbose unsafe-perm in lifecycle false
+123 info spm@3.0.0-rc6 Failed to exec preinstall script
+124 info /usr/local/lib/node_modules/spm unbuild
+125 info preuninstall spm@3.0.0-rc6
+126 info uninstall spm@3.0.0-rc6
+127 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild spm@3.0.0-rc6
+128 verbose /usr/local/bin,[object Object] binRoot
+129 info postuninstall spm@3.0.0-rc6
+130 error spm@3.0.0-rc6 preinstall: `node scripts/preinstall.js`
+130 error Exit status 1
+131 error Failed at the spm@3.0.0-rc6 preinstall script.
+131 error This is most likely a problem with the spm package,
+131 error not with npm itself.
+131 error Tell the author that this fails on your system:
+131 error     node scripts/preinstall.js
+131 error You can get their info via:
+131 error     npm owner ls spm
+131 error There is likely additional logging output above.
+132 error System Linux 3.5.0-32-generic
+133 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "spm@ninja" "-g"
+134 error cwd /media/5ab401cc-7bd4-4396-a25f-9fe96bf6ba44/Dariel/repository/anijs.github.io
+135 error node -v v0.10.26
+136 error npm -v 1.4.3
+137 error code ELIFECYCLE
+138 verbose exit [ 1, true ]
