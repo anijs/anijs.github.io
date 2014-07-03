@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <meta name="description" content="AniJS, Declarative handling library for CSS animations">
     <link rel="shortcut icon" type="assets/image/x-icon" href="assets/img/favicon.png">
     <title>AniJS, Declarative handling library for CSS animations</title>
 
@@ -72,7 +72,7 @@
             <i class="flaticon-air1 white"></i> 
         </div>
         <div class="splash">
-            <h1 class="splash-head" data-anijs="if: load, on: window, do: swing; if: animationend, on: .balloon, do: swing">AniJS</h1>
+            <h1 class="splash-head" data-anijs="if: onRunFinished, on: $AniJSEventProvider, do: bounce; if: animationend, on: .balloon, do: swing">AniJS</h1>
             <p class="splash-subhead" data-anijs="if: animationend, on: .splash-head, do: bounce">
                 Declarative handling library for CSS animations
             </p>
@@ -367,7 +367,7 @@
     <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
 
     <!-- AniJS Library -->
-    <script src="http://cdn.jsdelivr.net/anijs/0.4.0/anijs.js"></script>
+    <script src="lib/anijs/anijs.js"></script>
 
     <!-- Syntax Highlight -->
     <script src="lib/highlight/highlight.pack.js"></script>
