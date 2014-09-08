@@ -300,4 +300,54 @@ pre {
 	}
 }
 
+.active{
+	border:solid 1px #ddd;
+	border-bottom: none;
+	z-index: 2;
+	background: white;
+}
 
+.pure-menu p{
+	border-top: solid 1px #ddd;
+	margin: 0px;
+	margin-top: -1px;
+	font-size: 170%;
+	padding: 20px;
+	display: none;
+	position: absolute;
+	width: 41%;
+}
+
+.demo{
+	height: 100px;
+}
+
+.demo h2{
+	padding: 8px 15px;
+	font-size: 100%;
+	font-weight: 100;
+	color: #7f8c8d;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0px;
+	position: relative;
+}
+
+.active + p {
+  display: block;
+}
+
+.demo h2:hover{
+	background: #eee;
+	cursor: pointer;
+}
+
+
+.demo li{
+	padding: 4px 16px;
+}
+
+.demo li:hover{
+	background: #eee;
+	cursor: pointer;
+}
