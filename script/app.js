@@ -1,5 +1,4 @@
 YUI().use('node-base', 'node-event-delegate', 'autocomplete', 'autocomplete-highlighters','autocomplete-filters', 'transition', function(Y) {
-    
 
     //Setting default class adding when anim
     AniJS.setClassNamesWhenAnim('animated');
@@ -13,7 +12,7 @@ YUI().use('node-base', 'node-event-delegate', 'autocomplete', 'autocomplete-high
             eventTarget = Y.one('#demoon').get('value') || '#demotryit',
             behaviorTarget = Y.one('#demoto').get('value') || '#demotryit',
             behavior = AniJS.Parser.parseDoDefinition(Y.one('#demodo').get('value')),
-            successMessage = 'Animation setting up good!!! </br>' +
+            successMessage = 'Interaction setting up good!!! </br>' +
                             'Please ' + event + ' on ' + eventTarget;
 
         Y.one('#demo-message').set('innerHTML', successMessage);
