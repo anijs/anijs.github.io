@@ -29,7 +29,13 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/menu-collapse.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Javascript for "Smooth Scrolling" to anchor tags  -->
+    <!-- You can install Smooth Scroll with your favorite package manager. -->
+    <!-- For example, Bower: bower install https://github.com/cferdinandi/smooth-scroll.git -->
     
+    <script src="script/bind-polyfill.js"></script>
+    <script src="script/smooth-scroll.js"></script>
 </head>
 
 <body>
@@ -40,17 +46,17 @@
                 <i class="fa fa-bars"></i>
             </a>
             <ul id="menu" class="nav-list collapse">
-                <li class="pure-menu-selected"><a href="#welcome">Welcome</a>
+                <li class="pure-menu-selected"><a  data-scroll href="#welcome">Welcome</a>
                 </li>
-                <li><a href="#intro">Intro</a>
+                <li><a data-scroll href="#intro">Intro</a>
                 </li>
-                <li><a href="#tryit">Try It!</a>
+                <li><a data-scroll href="#tryit">Try It!</a>
                 </li>
-                <li><a href="#installing">Installing</a>
+                <li><a data-scroll href="#installing">Installing</a>
                 </li>
-                <li><a href="#using">Using</a>
+                <li><a data-scroll href="#using">Using</a>
                 </li>
-                <li><a href="#documentation">Documentation</a>
+                <li><a data-scroll href="#documentation">Documentation</a>
                 </li>
             </ul>
         </div>
@@ -313,7 +319,7 @@
                     <div class="pure-u-1">
                         <p>Easy to use | Compact - around <strong>7.7kb</strong> after gzipping | There is <strong>no need</strong> for <strong>third party</strong> libraries. | Speed of development. | Better integration between coders and designers.</p>
                         <p ><strong>“There is one more thing ...”</strong></p>
-                        <p>Work well in iPad, iPhone, Android and the <a href="http://browsehappy.com/">modern browsers</a>. <strong>;)</strong></p>
+                        <p>Works well in iPad, iPhone, Android and the <a href="http://browsehappy.com/">modern browsers</a>. <strong>;)</strong></p>
                     </div>
                 </div>
             </div>
@@ -341,7 +347,7 @@
                             
                         </div>
                        
-                        <p><a href="https://chrome.google.com/webstore/detail/anijs-studio/alnnlebgnablnnbhidppfpcpmlopegib?hl=en">AniJS Studio</a> is a chrome extension that will allow you to create, test, <br>and add animations prototypes to any webpage, or web application easily.</p>
+                        <p><a href="https://chrome.google.com/webstore/detail/anijs-studio/alnnlebgnablnnbhidppfpcpmlopegib?hl=en">AniJS Studio</a> is a Chrome extension that will allow you to create, test, <br>and add animations prototypes to any webpage or web application easily.</p>
                     </div>
                 </div>
             </div>
@@ -378,7 +384,7 @@
             <div class="section pure-g-r">
                 <div class="center">
                     <div class="pure-u-1">
-                        <p>AniJS is like a little girl, she needs <a href="http://www.youtube.com/watch?v=7CeNIDWtlo0#t=774">hungry and foolish</a> community people to grow up healthy. All your <a href="https://github.com/anijs/anijs/issues">issues</a>, <a href="https://github.com/anijs/anijs/pulls">pull requests</a> and <a href="https://github.com/anijs/anijs">stars ;) </a> are welcome. <i class="fa fa-smile-o"></i></p>
+                        <p>AniJS is like a little girl, in that she needs a community of <a href="http://www.youtube.com/watch?v=7CeNIDWtlo0#t=774">hungry and foolish</a> people to grow up healthy. All your <a href="https://github.com/anijs/anijs/issues">issues</a>, <a href="https://github.com/anijs/anijs/pulls">pull requests</a> and <a href="https://github.com/anijs/anijs">stars ;) </a> are welcome. <i class="fa fa-smile-o"></i></p>
                     </div>
                 </div>
             </div>
@@ -388,7 +394,7 @@
             <div class="section pure-g-r">
                 <div class="center">
                     <div class="pure-u-1">
-                        <p>To <a href="mailto:anisilv@gmail.com">Ms. Ana Silvia Tellería</a>, <a href="http://www.linkedin.com/pub/marisniulkis-lescaille/59/3a/55"> Ms. Marisniulkis Lescaille</a>,<a href="mailto:gallego@gmail.com">Mr. Yolier Galán</a>, <a href="mailto:voltusv@gmail.com">Mr. René González</a>, <a href="juliorubcan@gmail.com">Mr. Julio Cañizares</a>, <a href="https://twitter.com/caridy">Mr. Caridy Patino</a> and to all the persons that helped with this project.</p>
+                        <p>To <a href="mailto:anisilv@gmail.com">Ms. Ana Silvia Tellería</a>, <a href="http://www.linkedin.com/pub/marisniulkis-lescaille/59/3a/55"> Ms. Marisniulkis Lescaille</a>,<a href="mailto:gallego@gmail.com"> Mr. Yolier Galán</a>, <a href="mailto:voltusv@gmail.com">Mr. René González</a>, <a href="juliorubcan@gmail.com">Mr. Julio Cañizares</a>, <a href="https://twitter.com/caridy">Mr. Caridy Patino</a> and to all the persons who have contributed to this project.</p>
                     </div>
                 </div>
             </div>
@@ -418,6 +424,7 @@
     <!-- YUI3 Framework -->
     <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
 
+
     <!-- AniJS Library -->
     <script src="lib/anijs/anijs.js"></script>
     <script src="lib/anijs/helpers/dom/anijs-helper-dom.js"></script>
@@ -441,6 +448,14 @@
       ga('create', 'UA-44521541-4', 'anijs.github.io');
       ga('send', 'pageview');
 
+    </script>
+    <script>
+    smoothScroll.init({
+    speed: 450, // Integer. How fast to complete the scroll in milliseconds
+    easing: 'easeOutQuad', // Easing pattern to use
+    updateURL: true, // Boolean. Whether or not to update the URL with the anchor hash on scroll
+    offset: 40, // Integer. How far to offset the scrolling anchor location in pixels
+});
     </script>
 </body>
 
