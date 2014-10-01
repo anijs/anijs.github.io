@@ -78,4 +78,50 @@ YUI().use('node-base', 'node-event-delegate', 'autocomplete', 'autocomplete-high
         }
     }, '.header li a');
 
+    //Dinamically square generation
+    var baseNode = Y.one('#click-square'),
+        colCount = 3,
+        colorSquares = APP_CONFIG.colorSquares,
+        behaviorSquares = APP_CONFIG.behaviorSquares,
+        size = behaviorSquares.length,
+        squareCollectionHTML = '',
+        tempBehavior,
+        tempSquareHTML;
+
+    for (var i = 0; i < size; i++) {
+        tempBehavior = behaviorSquares[i];
+        tempSquareHTML = '<div class="demo-square demo1 ' + colorSquares[i] + '" ' +
+                            'data-anijs="if: ' + 'click' + ',' +
+                                        'do: ' + tempBehavior.do + ',' +
+                                        'to: ' + tempBehavior.to + '' +
+                                        '" ' +
+                            'data-id="' + i + '"' +
+                                        '>' +
+                            '</div>';
+        if(colCount === 0){
+            colCount = 3;
+            tempSquareHTML+= '<br>';
+        } else{
+            colCount--;
+        }
+        squareCollectionHTML += tempSquareHTML;
+    }
+    baseNode.one('.click-square-content-demo').append(Y.Node.create(squareCollectionHTML));
+    var anijsDinamicallySintax = Y.one('.anijs-sintax-dinamically'),
+        doValue = anijsDinamicallySintax.one('.do-value'),
+        toValue = anijsDinamicallySintax.one('.to-value'),
+        anijsHighlightDinamically = Y.one('.anijs-highlight-dinamically'),
+        doHighLValue = anijsHighlightDinamically.one('.do-value'),
+        toHighLValue = anijsHighlightDinamically.one('.to-value');
+    baseNode.delegate('click', function(e){
+        var currentSquareIndex = parseInt(e.currentTarget.getAttribute('data-id'));
+        doValue.set('innerHTML', behaviorSquares[currentSquareIndex].do);
+        toValue.set('innerHTML', behaviorSquares[currentSquareIndex].to);
+        doHighLValue.set('innerHTML', behaviorSquares[currentSquareIndex].do);
+        toHighLValue.set('innerHTML', behaviorSquares[currentSquareIndex].to);
+    }, '.demo-square');
+
+    // baseNode.appendChild(squareCollectionHTML);
+    AniJS.run();
+
 });

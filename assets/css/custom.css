@@ -1,13 +1,20 @@
 .demo-square{
-	height: 100px;
-	width: 100px;
-	background-color: #34495E;
+	height: 35px;
+	width: 35px;
+/*	background-color: #34495E;*/
+/*  background-color: #FC797A;*/
 	display: inline-block;
+	margin-right: 31px;
+  cursor: pointer;
 }
 
 pre {
 	margin-top: -20px;
 	padding-top: 15px;
+}
+
+.invisible{
+  visibility: hidden;
 }
 
 pre {
@@ -217,26 +224,86 @@ pre {
 	color: #FBB44C;
 }
 
-.green{
-	color: #2ABB9B;
+
+.orange-bg{
+  background-color: #FBB44C;
 }
+
+.orange-lgh-bg{
+  background-color: #FF9672;
+}
+
+.yellow-lgh-bg{
+  background-color: #FFCE44;
+}
+
+
+
+.green{
+  color: #2ABB9B;
+}
+
+.green-bg{
+  background-color: #2ABB9B;
+}
+
+.green-lgh-bg{
+  background-color: #68E9AB;
+}
+
+.green-lgh2-bg{
+  background-color: #77BDBD;
+}
+
+
 
 .pink{
-	color: #FC797A;
+  color: #FC797A;
 }
 
-.punkin{
+.pink-bg{
+  background-color: #FC797A;
+}
 
-	color: #EF5A34;
+
+
+
+.punkin{
+  color: #EF5A34;
+}
+
+.punkin-bg{
+  background-color: #EF5A34;
+}
+
+.gray-bg{
+  background-color: #858585;
+}
+
+
+.blue{
+  color: #1F8DD6;
+}
+
+.blue-bg{
+  background-color: #1F8DD6;
+}
+
+.blue-lgh-bg{
+  background-color: #6EB6E5;
+}
+
+.pink-lgh-bg{
+  background-color: #FFA0A0;
 }
 
 .white{
-	color: white;
+  color: white;
 }
 
 
 .balloon{
-	position: absolute;
+  position: absolute;
     -webkit-transition:top 4s;
     transition:top 4s;
     cursor: pointer;
@@ -350,4 +417,36 @@ pre {
 .demo li:hover{
 	background: #eee;
 	cursor: pointer;
+}
+
+#ui-components img{
+  max-width: 85%;
+  margin-left: 7.5%;
+  max-height: 100px;
+  min-height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ui-components .pure-g{
+  background: rgb(248, 249, 250);
+
+}
+
+#ui-components .more-examples-button-container{
+  margin-top: 30px;
+  width: 95%;
+}
+
+#more-examples{
+  float: right;
+}
+
+.click-square-content-demo{
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 18px 0px;
 }

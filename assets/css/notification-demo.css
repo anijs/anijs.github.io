@@ -1,0 +1,280 @@
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+#demo-notification{
+  width: 50%;
+  margin: 0 auto;
+  font-family: arial,helvetica,sans-serif;
+}
+
+/* notification app body*/
+#notification{
+  width: 40%;
+  height: 250px;
+  border: 1px solid #ddd;
+  position: relative;
+  line-height: 0;
+  margin: 0 auto;
+  font-size: 13px;
+}
+
+/* toolbar */
+#notification .toolbar{
+  width: 100%;
+  height: 30px;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+/* notification items container */
+#notification .container{
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  height: 220px;
+}
+
+/* trash icon */
+#notification .delete{
+  float: right;
+  padding: 5px 8px 8px 0px;
+  font-size: 17px;
+  color: #858585;
+  cursor: pointer;
+  transition: all 0.25s;
+  width: 24px;
+}
+
+#notification .delete:hover{
+  color: #444444;
+}
+
+/* bell app icon*/
+#notification .app-icon{
+  float: left;
+  padding: 5px 8px 8px 16px;
+  font-size: 17px;
+  color: #858585;
+  cursor: pointer;
+  transition: all 0.25s;
+  width: 24px;
+}
+
+
+#notification .app-icon:hover{
+  color: #444444;
+}
+
+/* read more notifications button */
+#notification .read-more{
+  position: absolute;
+  bottom: -1px;
+  margin: 0 auto;
+  z-index: 60;
+  width: 100%;
+  text-align: center;
+  padding: 7px 0px;
+  background: #f5f5f5;
+  color: #858585;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+#notification .read-more:hover{
+  color: white;
+  background-color: #1F8DD6;  
+}
+
+/* hidden utility */
+#notification .hidden{
+  display: none;
+}
+
+
+#notification .big-on-hover {
+  transform: scale(1, 1);
+}
+#notification .big-on-hover:hover {
+  transform: scale(1.2, 1.2);
+}
+
+/**
+* Reusable single-direction margin declaration
+*/
+#notification .margin, #notification p, #notification .item {
+  margin-top: 0;
+  margin-bottom: -1px;
+}
+#notification .margin:last-child, #notification p:last-child, #notification .item:last-child {
+  margin-bottom: 0;
+}
+
+#notification .item {
+  display: table;
+  transition: all 0.25s;
+}
+
+#notification .item:hover{
+  cursor: pointer;
+}
+
+#notification .item-image,
+#notification .item-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+#notification .item-top .item-image, #notification .item-top
+.item-body {
+  vertical-align: top;
+}
+#notification .item-bottom .item-image, #notification .item-bottom
+.item-body {
+  vertical-align: bottom;
+}
+
+#notification .item-image {
+  padding-right: 24px;
+}
+#notification .item-image > img {
+  display: block;
+  max-width: none;
+}
+#notification .item-rev .item-image {
+  padding-right: 0;
+  padding-left: 24px;
+}
+
+#notification .item-body {
+  width: 100%;
+}
+
+/**
+* Notification Styles
+*/
+#notification .note {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  border: solid 1px #ddd;
+  background: white;
+  z-index: 3;
+}
+
+#notification .note-secondary {
+  background-color: white;
+  border-color: #ddd;
+  z-index: 4;
+}
+
+#notification .note-success {
+  background-color: white;
+  border-color:#ddd;
+  z-index: 5;
+}
+
+#notification .note-gray {
+  background-color: white;
+  border-color:#ddd;
+  z-index: 6;
+}
+
+#notification .note-warning {
+  background-color: #f39c12;
+}
+
+#notification .note-error {
+  background-color: #e74c3c;
+}
+
+#notification .note-info {
+  background-color: #3498db;
+}
+
+#notification .note-icon,
+#notification .note-text {
+  padding: 5px;
+  color: white;
+}
+
+#notification .note-icon {
+  min-width: 27px;
+  text-align: center;
+  font-size: 1.0rem;
+  background-color: #FBB44C;
+}
+
+#notification .note-secondary .note-icon{
+  background-color: #1F8DD6;  
+}
+
+#notification .note-success .note-icon{
+  background-color: #FC797A;  
+}
+
+#notification .note-gray .note-icon{
+  background-color: #a3a3a3;  
+}
+
+#notification .note-text {
+  padding-right: 48px;
+  color: #FBB44C; 
+}
+
+#notification .note-secondary .note-text{
+  color: #1F8DD6;   
+}
+
+#notification .note-success .note-text{
+  color: #FC797A;   
+}
+
+#notification .note-gray .note-text{
+  color: #a3a3a3;  
+}
+
+#notification .note-close {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  width: 22px;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #FBB44C;
+  background-color: none;
+  transition: all 0.25s;
+}
+
+#notification .note-secondary .note-close{
+  color: #1F8DD6;   
+}
+
+#notification .note-success .note-close{
+  color: #FC797A;   
+}
+
+#notification .note-gray .note-close{
+  color:#a3a3a3;
+}
+
+
+#notification .note-close:hover {
+  background-color:#FBB44C;
+  color:white;
+}
+
+#notification .note-secondary .note-close:hover {
+  background-color:#1F8DD6;
+}
+
+#notification .note-success .note-close:hover {
+  background-color:#FC797A;
+}
+
+#notification .note-gray .note-close:hover{
+  background-color:#a3a3a3;
+}
+
+#notification .note:hover .note-close {
+  opacity: 1;
+}
