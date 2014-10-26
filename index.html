@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="assets/css/menu-collapse.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/notification-demo.css">
+    <link href='http://fonts.googleapis.com/css?family=Eater' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -61,16 +61,16 @@
 
         <div class="balloon ball1" data-anijs="if: animationend, on: .splash-subhead, do: ball1-end, after: $holdAnimClass;
         if: transitionend, do: rubberBand; if: mouseover, do: rollIn, to: .ball2$.ball3$.ball4">
-            <i class="flaticon-air1 orange"></i> 
+            <i class=" flaticon-air1 flaticon-halloween252 orange"></i>
         </div>
         <div class="balloon ball2" data-anijs="if: animationend, on: .splash-subhead, do: ball2-end, after: $holdAnimClass; if: transitionend, do: rubberBand; if: scroll, on: window, do: hinge; if: mouseover, do: hinge, to: .ball3$.ball4$.ball1$.splash$.pure-menu-heading">
-            <i class="flaticon-air1 pink"></i> 
+            <i class="flaticon-air1  flaticon-halloween280 pink"></i>
         </div>
         <div class="balloon ball3" data-anijs="if: animationend, on: .splash-subhead, do: ball3-end, after: $holdAnimClass; if: transitionend, do: rubberBand; if: mouseover, do: shake, to: .balloon">
-            <i class="flaticon-air1 green"></i> 
+            <i class="flaticon-air1 green flaticon-halloween3"></i>
         </div>
         <div class="balloon ball4" data-anijs="if: animationend, on: .splash-subhead, do: ball4-end, after: $holdAnimClass; if: transitionend, do: rubberBand; if: mouseover, do: rotateIn, to: .ball3$.ball2$.ball1">
-            <i class="flaticon-air1 white"></i> 
+            <i class="flaticon-air1 flaticon-halloween39 white"></i>
         </div>
         <div class="splash">
             <h1 class="splash-head" data-anijs="if: onRunFinished, on: $AniJSNotifier, do: swing animated; if: animationend, on: .balloon, do: swing">AniJS</h1>
@@ -94,7 +94,7 @@
                 <div id="click-square" class="l-box-lrg container-box pure-u-1 pure-u-med-1-2">
                     <h3 class="content-subhead">
                         <i class="fa fa-rocket"></i>
-                        Click Animation Demo
+                        Click Square Demo
                     </h3>
                     <div class="click-square-content-demo"
                          data-anijs="if:click, on: .demo1,
@@ -165,9 +165,7 @@
                         </div>
                     </div>
                     <div class="more-examples-button-container">
-                        <a id="more-examples" class="pure-button" href="http://codepen.io/collection/DFmkq/">
-                            More!!!
-                        </a>
+                        <button id="more-examples" class="pure-button pure-button-primary">More!!!</button>
                     </div>
                 </div>
         </div>
@@ -292,7 +290,7 @@
                         <div class="highlight highlight-xml" data-anijs="if: animationend, on: p.p-demo2, do: hinge"><pre><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"anijs-min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></pre></div>
 
                         <p>
-                        * Optionally you can include some <a href="https://github.com/anijs/anijs/wiki/CSS-animation-definitions" title=""> CSS animation definitions</a>.
+                        * Optionaly you can include some <a href="https://github.com/anijs/anijs/wiki/CSS-animation-definitions" title=""> CSS animation definitions</a>.
                         </p>
 
 <!-- Syntax Highlight -->
@@ -302,7 +300,7 @@
 <span class="nt">&lt;/head&gt;</span>
 </pre></div>
 <!-- End Syntax Highlight -->
-                        <p>* Start playing by adding <strong>data-anijs</strong> tag to any HTML element.</p>
+                        <p>* Start playing by adding <strong>anijs-data</strong> tag to any HTML element.</p>
 
 <!-- Syntax Highlight -->
 <div class="highlight highlight-xml"><pre><span class="nt">&lt;body&gt;</span>
