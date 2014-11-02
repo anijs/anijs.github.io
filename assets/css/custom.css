@@ -185,11 +185,6 @@ pre {
 .splash-head {
 	 border: 0px solid #FFF; 
 	 padding: 0; 
-   font-family: 'Eater', cursive;
-}
-
-.splash-subhead {
-  font-family: 'Eater', cursive;
 }
 
 @media (min-width: 30em){
@@ -320,7 +315,7 @@ pre {
 }
 
 .ball1-end{
-	top: 42%;
+	top: 31%;
 }
 
 .ball2{
@@ -329,7 +324,7 @@ pre {
 }
 
 .ball2-end{
-  top: 21%;
+	top: 8%;
 }
 
 .ball3{
