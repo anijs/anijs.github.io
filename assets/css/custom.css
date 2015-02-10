@@ -183,8 +183,8 @@ pre {
 }
 
 .splash-head {
-	 border: 0px solid #FFF; 
-	 padding: 0; 
+	 border: 0px solid #FFF;
+	 padding: 0;
 }
 
 @media (min-width: 30em){
@@ -350,15 +350,15 @@ pre {
 }
 
 .ball4 .flaticon-air1{
-	font-size: 65%;	
+	font-size: 65%;
 }
 
 .ball3 .flaticon-air1{
-	font-size: 80%;	
+	font-size: 80%;
 }
 
 .ball1 .flaticon-air1{
-	font-size: 90%;	
+	font-size: 90%;
 }
 
 @media (max-width: 768px){
@@ -450,3 +450,78 @@ pre {
   margin-right: auto;
   padding: 18px 0px;
 }
+
+.sponsorship {
+  position: fixed;
+  right: 0px;
+  top: 61px;
+  background-color: #F8F9FA;
+  padding: 12px;
+  z-index: 200;
+  width: 20%;
+  border-radius: 9px 0px 0px 9px;
+  -webkit-transform: translateX(2000px);
+  -ms-transform: translateX(2000px);
+  transform: translateX(2000px);
+}
+
+.sponsorship .title{
+  text-align:center;
+  font-size:110%;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.sponsorship .sub-title{
+  line-height: 1.5em;
+  font-size: 92%;
+}
+
+.sponsorship .see-more{
+  text-align:right
+}
+
+.sponsorship .see-more .pure-button{
+  background-color: #FC797A;
+  padding: .5em 1.3em;
+  font-size: 90%;
+}
+
+@media (max-width: 768px){
+  .sponsorship{
+    right: 0px;
+    top: 40px;
+    width: 100%;
+    height: 105px;
+    border-radius: 0px;
+  }
+
+  .sponsorship .title {
+    text-align: center;
+    font-size: 110%;
+    margin-top: 4px;
+    margin-bottom: 0px;
+  }
+
+  .sponsorship .sub-title {
+    line-height: 1.5em;
+    font-size: 92%;
+    margin: 5px;
+    text-align: center;
+  }
+
+  .sponsorship .see-more {
+    position: fixed;
+    right: 12px;
+    top: 55px;
+  }
+
+  .sponsorship img{
+    display: none;
+  }
+
+
+}
+
+
+
