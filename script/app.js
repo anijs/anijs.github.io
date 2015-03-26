@@ -1,10 +1,10 @@
+//Setting default class adding when anim
+AniJS.setClassNamesWhenAnim('animated');
+
 YUI().use('node-base', 'node-event-delegate', 'autocomplete', 'autocomplete-highlighters','autocomplete-filters', 'transition', function(Y) {
-
-    //Setting default class adding when anim
-    AniJS.setClassNamesWhenAnim('animated');
-
     //Obtain AniJS default helper
     var AniJSDefaultHelper = AniJS.getHelper();
+
 
     //Put this function into the helper
     AniJSDefaultHelper.validateCommandExecution = function(e, animationContext){

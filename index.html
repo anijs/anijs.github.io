@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="lib/highlight/markdown-highligth.css">
 
     <!-- Animated CSS Animation Library -->
-    <link rel="stylesheet" href="lib/animationcss/animate.css">
+    <link rel="stylesheet" href="lib/anicollection/anicollection.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/menu-collapse.css">
@@ -56,31 +56,12 @@
             </ul>
         </div>
     </div>
-
-    <div class="sponsorship" data-anijs=
-    "if: transitionend, on: .ball1, do: slideInRight animated"
-    >
-            <p class="title">
-               Discover AniJS Studio
-            </p>
-            <a href="https://www.kickstarter.com/projects/888703031/anijs-studio" title="">
-                <img class="pure-img" data-anijs="if: mouseover, do: pulse animated" src="assets/img/anijsstudio.png">
-            </a>
-            <p class="sub-title">
-               A visual tool to add animations to any web without coding.
-            </p>
-            <p class="see-more">
-<a id="more-examples" class="pure-button" data-anijs="if: mouseover, on: .sponsorship, do: bounce animated" href="https://www.kickstarter.com/projects/888703031/anijs-studio" target="_blank">
-                            Go!!!
-                        </a>
-            </p>
-    </div>
     <div class="splash-container">
         <div class="balloon ball1" data-anijs="if: animationend, on: .splash-subhead, do: ball1-end, after: $holdAnimClass;
         if: transitionend, do: rubberBand; if: mouseover, do: rollIn, to: .ball2$.ball3$.ball4">
             <i class="flaticon-air1 orange"></i>
         </div>
-        <div class="balloon ball2" data-anijs="if: animationend, on: .splash-subhead, do: ball2-end, after: $holdAnimClass; if: transitionend, do: rubberBand; if: scroll, on: window, do: hinge; if: mouseover, do: hinge, to: .ball3$.ball4$.ball1$.splash$.pure-menu-heading">
+        <div class="balloon ball2" data-anijs="if: animationend, on: .splash-subhead, do: ball2-end, after: $holdAnimClass; if: transitionend, do: rubberBand; if: scroll, on: window, do: hinge, after: removeAnim; if: mouseover, do: hinge, to: .ball3$.ball4$.ball1$.splash$.pure-menu-heading, after: removeAnim">
             <i class="flaticon-air1 pink"></i>
         </div>
         <div class="balloon ball3" data-anijs="if: animationend, on: .splash-subhead, do: ball3-end, after: $holdAnimClass; if: transitionend, do: rubberBand; if: mouseover, do: shake, to: .balloon">
@@ -96,7 +77,7 @@
  -->                A Library to Raise your Web Design without Coding
             </p>
             <p>
-               <iframe class="first-iframe" data-anijs="if: animationend, on: .splash-head, do: hinge" src="http://ghbtns.com/github-btn.html?user=anijs&repo=anijs&type=watch&count=true&size=large"
+               <iframe class="first-iframe" data-anijs="if: animationend, on: .splash-head, do: hinge, after: removeAnim" src="http://ghbtns.com/github-btn.html?user=anijs&repo=anijs&type=watch&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="152" height="30"></iframe>
                 <iframe data-anijs="if: animationend, on: .first-iframe, do: rubberBand" src="http://ghbtns.com/github-btn.html?user=anijs&repo=anijs&type=fork&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="156" height="30"></iframe>
@@ -315,8 +296,8 @@
 
 <!-- Syntax Highlight -->
 <div class="highlight highlight-xml"><pre><span class="nt">&lt;head&gt;</span>
-    <span class="c">&lt;!-- Animate.css library --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://anijs.github.io/lib/animationcss/animate.css"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- AniCollection.css library --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://anijs.github.io/lib/anicollection/anicollection.css"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
 </pre></div>
 <!-- End Syntax Highlight -->
@@ -357,17 +338,17 @@
             </div>
         </div>
         <div class="content">
-            <h2 class="content-head is-center">Discover AniJS Studio</h2>
+            <h2 class="content-head is-center">Discover AniCollection</h2>
             <div class="section pure-g-r is-center">
                 <div class="center">
                     <div class="pure-u-1" data-anijs="if:mouseover, do: swing, to: a.anijs-studio">
                         <div class="pure-u-1-2">
-                            <a class="anijs-studio" href="https://www.kickstarter.com/projects/888703031/anijs-studio">
-                                <img class="pure-img" src="assets/img/anijsstudio.png">
+                            <a class="anijs-studio" href="http://anicollection.github.io/">
+                                <img class="pure-img" src="assets/img/anicollection.png">
                             </a>
 
                         </div>
-                        <p><a href="https://www.kickstarter.com/projects/888703031/anijs-studio">AniJS Studio</a> is a visual tool to add animations<br>and interactions to any web <strong>without coding</strong>.</p>
+                        <p><a href="http://anicollection.github.io/">AniCollection</a> is an easy way to find, use and share CSS3 animations.</p>
                     </div>
                 </div>
             </div>
